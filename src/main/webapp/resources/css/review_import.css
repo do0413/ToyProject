@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+
+.section-title product__discount__title{
+	display : flex; justify-content : center; aligin-items : center;
+}
+input[type=checkbox], input[type=radio] {
+margin-top : 5px;
+	}
+	
+	.product__discount__title {
+    text-align: left;
+    margin-bottom: 10px;
+	}
+	

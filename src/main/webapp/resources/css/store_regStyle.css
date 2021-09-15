@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[contents]
+1.  body
+2.  info
+	2.1 seller info
+	2.2 
+
+3.  info btn, input 
+-------------------------------------------------------------------*/
+
+
+/*----------------------------------------*/
+/* 1.body
+/*----------------------------------------*/
+body {
+	font-family: "Cairo", sans-serif;
+	/*text-rendering : optimizeLegibility;*/
+	-webkit-font-smoothing : antialiased;
+}
+
+
+/*----------------------------------------*/
+/* 2. font
+style="font-size:13px;"
+readonly  
+/*----------------------------------------*/
+.store_reg_form h1 {
+    margin: 0 0 40px 0;
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: 3px;
+}
+
+.store_reg_form h3 {
+   	text-align: center;
+    margin: 0 auto 30px auto;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.store_reg_form ts{
+	width: 150px;
+	height:40px;
+    padding: 11px 0 0 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+    font-weight:normal;
+  	font-family: "Cairo", sans-serif;
+}
+
+.store_reg_form .ico{
+	color: red;
+}
+
+/*----------------------------------------*/
+/* 2. 내용크기
+/*----------------------------------------*/
+.store_reg_form {
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#store_reg_form .col-lg-8 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*flex-direction: column;*/
+	width: 100%;/*400px;*/
+	height: 100%;
+	 
+}
+
+.store_reg_form form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-top: 20px;
+	width: 500px;
+}
+
+.store_reg_form .radio_input {
+	height: 20px;
+    /*width: 110px;*/
+    width: 50px;
+}
+
+/*----------------------------------------*/
+/* 2. 박스크기
+/*----------------------------------------*/
+
+
+.id_input_box {
+	width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.id_input_box td{
+	width: 80%;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.store_reg_form form .add_input {
+	height:37px;
+	width:200px;
+	margin :0 2px 0 0;
+	border: 1px solid  rgb(204, 204, 204);
+	border-radius: 3px;
+	
+	/*text-align: center;
+	margin*/
+}
+
+
+.store_reg_form form input .thumbnail_em{
+    height:200px;
+    width: 350px; 
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.id_input_box_s {
+	width: 100%;
+	height: 102%; /*180px;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 4px auto;
+}
+
+.id_input_box_ssS {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	
+	
+}
+
+.id_input_box_ssS {
+	width: 100%;
+	height: 250px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	
+	
+}
+
+/*.add_input, 
+.id_input_box_s td{
+	
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}*/
+
+.store_reg_form form .add_input {
+	height:37px;
+	width:275px;
+	margin :0 2px 0 0;
+	border: 1px solid  rgb(173, 173, 173);
+	border-radius: 3px;
+	font-size: 13px;
+
+}
+
+.store_reg_form form input {
+    height: 35px;
+    width: 350px; 
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+
+
+/*----------------------------------------*/
+/* 2. btn
+/*----------------------------------------*/
+
+/*밝은버튼
+.update .btn-jj {
+	width: 180px;
+    height: 50px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 100, 0,0.6);
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 100, 0,0.7);
+}*/
+
+.store_reg_form .join_btn_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	
+}
+
+
+.store_reg_form form .add_btn {
+	height:37px;
+	width:75px;
+	text-align: center;
+	/*margin*/
+}
+
+.store_reg_form .btn-jj { 
+    width: 180px;
+    height: 50px;
+    background: #7fad39;
+    border: 1px solid #7fad39;
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:white;
+}
+
+.store_reg_form .btn-j {
+	width: 180px;
+	height: 50px;
+	background: #ffffff ;
+	border:1px solid rgba(0, 100, 0,0.6);
+	font-family: "Cairo", sans-serif;
+	font-size: 15px;
+	font-weight:bold;
+	border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 100, 0,0.7);
+    margin: 0;
+}
+
+.store_reg_form .join_btn {
+	width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+
+.current{
+	font-size: 13px;
+}
+
+.store_reg_form .join_btn_box p{
+	width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 23px;
+    flex-direction: row;
+    padding-left: 0px; 
+}
+
+.linez{
+	border-bottom: 2px solid #dee2e6;
+}
+
+

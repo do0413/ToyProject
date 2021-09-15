@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.shoping__cart__btns {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.form-check-cart .primary-btn {
+	width: 100%;
+	border-radius:6px;
+}
+
+.shoping__checkout {
+	
+}
+button, input {
+    overflow: visible;
+    border : 0px;
+}

@@ -1,0 +1,435 @@
+input[id="menuicon"] {display:none;}
+input[id="menuicon"] + label {display:block;margin:10px 0 ;width:30px;height:20px;position:relative;cursor:pointer;}
+input[id="menuicon"] + label span {display:block;position:absolute;width:100%;height:5px;border-radius:30px;background: rgba(0, 100, 0,0.6);transition:all .35s;}
+input[id="menuicon"] + label span:nth-child(1) {top:0;}
+input[id="menuicon"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);} 
+input[id="menuicon"] + label span:nth-child(3) {bottom:0;}
+input[id="menuicon"]:checked + label {z-index:2;}
+input[id="menuicon"]:checked + label span {background:rgb(62, 163, 105, 0.8);}
+input[id="menuicon"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);}
+input[id="menuicon"]:checked + label span:nth-child(2) {opacity:0;}
+input[id="menuicon"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);}
+div[class="sidebar"] {width:300px;height:100%;background :  rgba(0, 100, 0,0.2);position:fixed;top:0;left:-300px;z-index:1;transition:all .35s;}
+input[id="menuicon"]:checked + label + div {left:0;}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+.card .card-image{
+overflow: hidden;
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+-ms-transform-style: preserve-3d;
+-o-transform-style: preserve-3d;
+transform-style: preserve-3d;
+}
+
+.card .card-image img{
+-webkit-transition: all 0.4s ease;
+-moz-transition: all 0.4s ease;
+-ms-transition: all 0.4s ease;
+-o-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+
+.card{
+font-family: 'Roboto', sans-serif; 
+margin-top: 10px;
+position: relative;
+-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+box-shadow: 4 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card .card-content {
+padding: 10px;    
+}
+
+.card .card-content .card-title, .card-reveal .card-title{
+font-size: 24px;
+font-weight: 200;    
+}
+
+.card .card-action{
+padding: 20px;
+border-top: 1px solid rgba(160, 160, 160, 0.2);
+}
+.card .card-action a{
+font-size: 15px;
+color: #666666;
+text-transform:uppercase;
+margin-right: 20px;    
+-webkit-transition: color 0.3s ease;
+-moz-transition: color 0.3s ease;
+-o-transition: color 0.3s ease;
+-ms-transition: color 0.3s ease;
+transition: color 0.3s ease;
+}
+.card .card-action a:hover{    
+color:#ffd8a6;
+text-decoration:none;
+}
+
+.card .card-reveal{    
+padding: 20px;
+position: absolute;
+background-color: #FFF;
+width: 100%;
+overflow-y: auto;
+/*top: 0;*/
+left:0;
+bottom:0;
+height: 100%;
+z-index: 1;
+display: none;    
+}
+
+.card .card-reveal p{
+color: rgba(0, 0, 0, 0.71);
+margin:20px ;
+}
+
+.btn-custom{
+background-color: transparent;
+font-size:18px;
+}
+.BestReview .BestReview-item {
+cursor: pointer;
+position: relative;
+display: block;
+max-width: 25rem;
+overflow: hidden;
+}
+.BestReview .BestReview-item .BestReview-item-caption {
+position: absolute;
+top: 0;
+left: 0;
+transition: all 0.2s ease-in-out;
+opacity: 0;
+background-color: rgba(26, 188, 156, 0.9);
+}
+.BestReview .BestReview-item .BestReview-item-caption:hover {
+opacity: 1;
+}
+.BestReview .BestReview-item .BestReview-item-caption .BestReview-item-caption-content {
+font-size: 1.5rem;
+}
+
+.BestReview-modal .BestReview-modal-title {
+font-size: 2.25rem;
+line-height: 2rem;
+}
+@media (min-width: 992px) {
+.BestReview-modal .BestReview-modal-title {
+font-size: 3rem;
+line-height: 2.5rem;
+}
+}
+.BestReview-modal .close {
+position: absolute;
+z-index: 1;
+right: 1.5rem;
+top: 1rem;
+font-size: 3rem;
+line-height: 3rem;
+color: #1abc9c;
+opacity: 1;
+}
+
+  div[class="navibar"] {
+    display: block;
+    font-size: 20px;
+  }
+  a:link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  html {
+    overflow-y: scroll;
+    font-family : 'Jua', sans-serif;
+  }
+  div[class="header"] {
+    background-color: rgb(62, 163, 105, 0.09);
+  }
+  #search {
+    display: block;
+    text-align: right;
+  }
+  #sign {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+  }
+  
+  .content {
+    display: flex;
+    flex-flow: column;
+  }
+  
+  .SellerInfo {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px;
+    color: #000;
+  }
+  .SellerNav ul {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.842);
+    background-color: rgb(226, 226, 226);
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .SellerNav li {
+    padding: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footerEx {
+    margin-top: auto;
+    justify-content: center;
+  }
+  .footerCall {
+    justify-content: center;
+    align-items: center;
+  }
+  #kakao {
+    margin-top: auto;
+    justify-content: center;
+    border: 1px solid black;
+    display: inline-flex;
+  }
+  #onecc {
+    margin-top: auto;
+    justify-content: center;
+    border: 1px solid black;
+    display: inline-flex;
+  }
+  .SellerName {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
+  }
+  .titleCon {
+    display: flex;
+    justify-content: center;
+  }
+  .title {
+    width: 300px;
+    border: 1px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .SellerPic > .sellerPic_source > a > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+  }
+  
+  .SellerInfo ul {
+    padding: 0;
+  }
+  
+  .chartNav {
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .chartfont span {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+  }
+  .today span {
+    font-size: 20px;
+  }
+  .chartboxCon {
+    display: flex;
+    justify-content: center;
+  }
+  .chartbox {
+    border: 1px solid rgb(153, 153, 153);
+    background-color: red;
+    font-size: 15px;
+    color: #fff;
+    width: 220px;
+    height: 30px;
+    margin-bottom: 30px;
+  }
+  .meatInfo {
+    display: inline-flex;
+    flex-flow: column;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: space-between;
+    height: 100px;
+  }
+  
+  .meatPic {
+    border: 1px solid black;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    flex-flow: flow;
+  }
+  .meatName {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .meatgram {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .meatgrade {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .meatcash {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .chartDetailCon {
+    display: flex;
+    justify-content: center;
+  }
+  .chartDetail > .a {
+    display: flex;
+  }
+  .chartDetail {
+    background-color: rgb(5, 147, 80);
+    border: 1px solid rgb(153, 153, 153);
+  
+    color: #fff;
+    width: 220px;
+    height: 20px;
+  }
+  .bestReview_Header {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #000;
+  }
+  .bestReview_Pic {
+    display: inline-flex;
+    justify-content: space-around;
+  }
+  .bestReview_PicSource img {
+    display: intline-flex;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+  }
+  .bestReview_PicSource p {
+    display: flex;
+    justify-content: center;
+  }
+  .locationNav {
+    margin-top: 30px;
+    display: flex;
+    font-weight: bold;
+    color: #000;
+  }
+  .location {
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .CsCenterCon {
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .CsCenterText {
+    width: 50%;
+  }
+  .location img {
+    width: 50%;
+    height: 50%;
+  }
+  .CsInsert_btn {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(5, 147, 80);
+    border: 1px solid rgb(153, 153, 153);
+    font-size: 30px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .CsInsertName {
+    display: inline-flex;
+    justify-content: left;
+    margin-right: 30px;
+  }
+  .CsInsertTime {
+    display: inline-flex;
+    justify-content: left;
+  }
+  .CsUnReady {
+    display: inline-flex;
+    background-color: grey;
+    color: #fff;
+    font-weight: bold;
+  }
+  .CsReady {
+    display: inline-flex;
+    background-color: rgb(5, 147, 80);
+    color: #fff;
+    font-weight: bold;
+  }
+  .CsInsertNamead {
+    display: inline-flex;
+    background-color: rgb(5, 147, 80);
+    color: #fff;
+    font-weight: bold;
+  }
+  .CsInsertName {
+    font-weight: bold;
+  }
+  .CsMainText1 {
+   
+    margin-bottom: 5px;
+  }
+  .CsMainText2 {
+    
+   
+    margin-bottom: 5px;
+  }
+  .CsMainTextRe {
+    
+    margin-bottom: 5px;
+  }
+  .CsCenterCon a {
+    width: 100%;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: rgb(62, 163, 105, 0.09);
+  }
+  
+  @import url( 'https://fonts.googleapis.com/css2? family = Jua & display = swap');
+  * {
+    font-family : 'Jua', sans-serif;
+  }

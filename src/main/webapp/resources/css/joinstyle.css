@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[contents]
+1.  body
+2.  join
+3.  join btn, input
+-------------------------------------------------------------------*/
+
+/*----------------------------------------*/
+/* 1.body
+/*----------------------------------------*/
+body {
+	font-family: "Cairo", sans-serif;
+	/*font-family: 'Montserrat', sans-serif;*/
+	/*text-rendering : optimizeLegibility;*/
+	-webkit-font-smoothing : antialiased;
+}
+
+
+
+/*----------------------------------------*/
+/* 2. join
+/*----------------------------------------*/
+.join h1 {
+    margin: 0 0 40px 0;
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: 3px;
+}
+
+.join h3 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.join {
+	width :450px;
+	height: 850px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+.join option {
+	width: 40px;
+}
+
+.join .ico{
+	color: red;
+}
+
+.join .ico_email{
+	font-size: 15px;
+	margin: auto 2.5px;
+}
+
+.join .ico_ag{
+	font-size: 15px;
+	margin: 5px 30px 0 10px;
+}
+
+.join ts {
+	width: 150px;
+	height:50px;
+    padding: 15px 0 0 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+    font-weight:normal;
+  	font-family: "Cairo", sans-serif;
+}
+
+#join {
+    /*padding: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 110px;*/
+    margin-top: 110px;
+    padding: 0 auto 7% auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+}
+
+.join row justify-content-center {
+	border-top: 4px solid #333;
+}
+
+#join .col-lg-8 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.join form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width:510px;
+	padding-top: 16px;
+	font-family: "Cairo", sans-serif;
+	border-top: 2px solid #dee2e6;
+	
+}
+
+
+/*----------------------------------------*/
+/*  3.  join btn, input
+/*----------------------------------------*/
+.join form .add_btn {
+	height:37px;
+	width:75px;
+	text-align: center;
+	/*margin*/
+}
+
+.join form .add_input {
+	height:37px;
+	width:224px;
+	margin :0 2px 0 0;
+	border: 1px solid  rgb(204, 204, 204);
+	border-radius: 3px;
+	
+	/*text-align: center;
+	margin*/
+}
+
+.join form input {
+	height:37px;
+	width:300px;
+	border: 1px solid  rgb(204, 204, 204);
+	border-radius: 3px;
+	
+}
+
+.join .add_input_email {
+	height:37px;
+	width:160px;
+	border: 1px solid  rgb(204, 204, 204);
+	border-radius: 3px;
+	
+}
+
+.join .add_input_email_se {
+	
+	width:122px;
+	
+	
+}
+
+
+.id_input_box {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.join .input_box_box {
+	width: 300px;
+	height: 50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+}
+
+
+
+.id_input_box_s {
+	width: 100%;
+	height: 150px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	
+}
+.add_input, 
+
+.id_input_box_s td{
+	
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+
+
+
+
+
+
+.join placeholder {
+	font-size: 
+}
+.join .radio_input {
+	height: 20px;
+    /*width: 110px;*/
+    width: 30px;
+}
+
+.join form [type=radio]:checked+.radio_input {
+	border: 1px soid  rgba(0, 100, 0,0.8);
+	background:  rgba(0, 100, 0,0.8);
+	
+}
+
+
+
+
+.join .join_btn {
+	width :100%;
+	display: flex;
+	justify-content:space-evenly;
+	align-items: center;
+	margin-top:15px;
+}
+
+.join .btn-jj {
+	width: 220px;
+	height: 60px;
+	background: #7fad39;
+	border:1px solid #7fad39;
+	font-family: "Cairo", sans-serif;
+	font-size: 15px;
+	font-weight:bold;
+	border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.join .btn-j {
+	width: 220px;
+	height: 60px;
+	background: #ffffff ;
+	border:1px solid #7fad39;;
+	font-family: "Cairo", sans-serif;
+	font-size: 15px;
+	font-weight:bold;
+	border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:#7fad39;
+    margin: 0;
+}
+
+.current{
+	font-size: 13px;	
+}
+
+
+/*---------------------------------------------*/
+/* Media queries */
+/*---------------------------------------------*/
+@media(max-width: 500px) {
+	
+	.bg-img {
+	min-width: 100%;
+	height: 50%;
+	margin: 0;
+	}
+
+	.forgot-password {
+	text-align: right;
+	float: left;
+	padding: 20px 0;
+	}
+
+
+	#login {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+}
+.linez{
+	border-bottom: 2px solid #dee2e6;
+}

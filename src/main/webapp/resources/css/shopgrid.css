@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+   /*조건필터*/
+   .shoplist {
+   		background-color: rgb(127, 173, 57, 0.1);
+   		
+   }
+   
+   .shoplisttwot #s_seoul{
+   		padding-left:3px;
+   }
+   .shoplistt{
+	   display: flex;
+	   justify-content: center;
+	   width: 100%;
+   }
+   .shoplis{
+	    padding-top: auto;
+	    padding-right: 15px;
+	    padding-left: 15px;
+    
+}
+   }
+   .shoplist {
+	   padding-top: 15px;
+	   padding-right: 15px;
+	   padding-left: 15px;
+	   padding-bottom: 15px; 
+	   background-color: #e0f6d2;
+	   width: 100%;
+   }
+   .shoplistone{
+	   display: flex;
+	   justify-content: center;
+	   padding-top: 15px;
+	   padding-bottom: 15px;
+	   padding-right: 15px;
+	   padding-left: 15px; 
+	   font-size: 30px;
+	   font-family: "Cairo", sans-serif;
+   }
+   .shoplistones{
+   display: flex;
+   justify-content: center;
+   }
+   .shoplistoness{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 35px;
+   height: 35px;
+   font-size: 20px;
+   }
+   .shoplisttwo{
+   padding-top: 10px;
+   padding-bottom: 10px;
+   display: flex;
+   justify-content: flex-start;
+   margin:auto 100px;
+   }
+   .shoplisttwoo{
+   padding-left:15px;
+   width:9.46%;
+   display: flex;
+   justify-content: flex-start;
+   }
+   .shoplisttwoo p{
+   font-family: "Cairo", sans-serif;
+   }
+   .shoplisttwot{
+   padding-right:15px;
+   width:800px;
+   display: flex;
+   justify-content: space-around;
+   list-style:none;
+   }
+   .shoplisttwot p{
+   margin-right: 82px;
+   margin-top: -5px;
+   }
+   .shoplisttwot li{
+     font-family: "Cairo", sans-serif;
+   }
+   .shoplistth{
+   padding-top: 10px;
+   padding-bottom: 10px;
+   display: flex;
+   justify-content: flex-start;
+   margin-left:100px;
+   }
+   .shoplisttho{
+   padding-left:15px;
+   display: flex;
+   width:10%;
+   justify-content: flex-start;
+   }
+   .shoplisttho p{
+   font-family: "Cairo", sans-serif;
+   }
+   .shoplisttht{
+   width:100%;
+   display: flex;
+   justify-content: flex-start;
+   list-style:none;
+   }
+   
+    .shoplisttht #cow{
+  		margin-left:35px;
+   }
+   
+   .shoplisttht #pig_li{
+	 	margin-left : 77px;
+	 }
+   
+   .shoplisttht p{
+   margin-right: 73px;
+   margin-top: -5px;
+   }
+   
+   .shoplisttht li{
+   font-family: "Cairo", sans-serif;
+   
+   }
+   .shoplistfo{
+   padding-top: 10px;
+   padding-bottom: 15px;
+   display: flex;
+   justify-content: flex-start;
+   }
+   .shoplistfoo{
+   padding-left:15px;
+   width:10%;
+   display: flex;
+   justify-content: flex-start;
+   }
+   .shoplistfoo p{
+   font-family: "Cairo", sans-serif;
+   }
+   .shoplistfot {
+   padding-right:15px;
+   width:90%;
+   display: flex;
+   justify-content: space-between;
+   list-style:none;
+    padding-left:0px;
+   }
+   .shoplistfot li{
+   font-family: "Cairo", sans-serif;
+   }
+   .shopliststar{
+   padding-top: 10px;
+   padding-bottom: 15px;
+   display:flex;
+   justify-content: flex-start;
+   margin-left:100px;
+   }
+   
+   .shopliststarone{
+   padding-left:15px;
+   width:10%;
+   display: flex;
+   justify-content: flex-start;
+   }
+   
+   /*.shopliststartwo{
+   width:100%;
+   margin-left:39px;
+   display: flex;
+   justify-content: flex-start;
+   }*/
+   
+   .shopliststartwo{
+   padding-right: 15px;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+   }
+   
+   .shopliststartwo p{
+   margin-right: 57px;
+   margin-top: -5px;
+   }
+   
+   .shopliststartwo li{
+   list-style:none;
+   font-family: "Cairo", sans-serif;
+   /*soobin */
+   margin-right: 3px;
+   }
+   
+   .shoplistb{
+   padding-top: 10px;
+   display:flex;
+   justify-content: center;
+   }
+   
+   .shoplistbu{
+   display:flex;
+   justify-content: space-around;
+   padding-bottom: 15px;
+   width: 40%;
+   
+   }
+   
+   .shoplist_but{
+   display: flex;
+   border-radius:3px;
+   }
+   
+   .shoplistm{
+   margin-top: 50px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   }
+  
+   /*현재 페이지밑 패이지 이동부분*/
+   .product__pagination_center{
+   display: flex;
+   justify-content: center;
+   }
+   .reviewlist{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   }
+   .reviewlistm{
+   margin-top: 50px;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   }
+   .reviewlistt{
+   width: 1140px;
+   justify-content: center;
+   }
+   
+   /*간단한 가게정보*/
+   .shoptext{
+   
+   }
+   .shoptexto{
+   text-align: right;
+   width: 306px;
+   }
+   .shoptextt{
+   display: flex;
+   justify-content: flex-end;
+   text-align: right;
+   width: 306px;
+   }
+   .shoplistm .row .col-lg-4{
+   padding-top: 20px;
+   width: 100%;
+   }
+   .shoplistn {
+   display:flex;
+   flex-wrap: wrap;
+   padding-left: 5px;
+
+   }
+ .shoping__cart__table table tbody tr td.shoping__cart__item{
+    width: 600px;
+    height: 300px;
+   text-align: left;
+ }
+ 
+ /*do*/
+.col-lg-6 {
+	padding-left: 0px;
+	position: relative;
+    width: 100%;
+    padding-right: 15px;
+}
+
+.col-lg-6 .table {
+ 	width: 100%;
+ 	height: 201px;
+    text-align: center;
+    display: flex;
+    padding : 10px 20px;
+    margin: 10px 14px;
+    border: 1px solid;
+    
+ }
+ 
+.col-lg-box .table {
+ 	width: 100%;
+ 	height: 201px;
+    text-align: center;
+    display: flex;
+    padding : 10px 20px;
+    margin: 10px;
+    /*border: 1px solid #a6a6a6;*/
+    /*border: 1px solid rgb(85, 85, 85);*/  
+    /*background-color: rgb(127, 173, 57, 0.1);*/
+    background-color: rgb(245, 245, 245);
+ }
+ 
+.col-lg-box {
+	width: 555px;
+	display: flex;
+} 
+ 
+.table-le-top {
+	display: flex;
+	
+}
+
+.table-le {
+	width: 55%;
+}
+
+.table-le-name {
+	font-size: 25px;
+	font-family: "Cairo", sans-serif;
+	margin:2px;
+	margin-left: 35px;
+	text-align: start;
+	font-weight: bold;
+}
+
+.table-le-name a {
+	/*font-size: 16px;*/
+    color: #1c1c1c;
+    /*line-height: 39px;
+    display: block;*/
+}
+
+.avgStar {
+	font-size: 20px;
+	font-family: "Cairo", sans-serif;
+	margin: 7px;
+	margin-left: 18px;
+	text-align: start;
+	font-weight: bold;
+	align-items: center;
+	color: rgb(255, 0, 0, 0.8);
+	/*color: rgb(127, 173, 57);*/
+}
+
+.table-le-topbox {
+	display: flex;
+}
+
+.table-le-text {
+	font-size: 17px;
+	font-family: "Cairo", sans-serif;
+	margin: 7px;
+	margin-left: 35px;
+	text-align: start;
+}
+ 
+ .shoping__cart__table {
+ 	height: 300px;
+    margin-bottom: 30px;
+}
+ 
+.product {
+	padding-top: 80px;
+    padding-bottom: 45px;
+} 
+
+ /*버튼*/
+ 
+ .shoplist_but .site-btn {
+ 	font-size: 14px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 13px 30px 12px;
+    background: #7fad39;
+    border-radius : 6px;
+    border: none;
+ }

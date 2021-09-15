@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+	/*조건필터*/
+	.shoplist {
+	padding-top: 20px;
+	padding-right: 30px;
+	padding-left: 30px; 
+	 background-color: #f5faff;
+	 padding-bottom: 20px;
+	}
+	.shoplistone{
+	display: flex;
+	justify-content: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 15px;
+	padding-left: 15px; 
+	font-size: 30px;
+	font-family: "Cairo", sans-serif;
+	}
+	.shoplistones{
+	display: flex;
+	justify-content: center;
+	}
+	.shoplistoness{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 35px;
+	height: 35px;
+	font-size: 20px;
+	}
+	.shoplisttwo{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: flex-start;
+	}
+	.shoplisttwoo{
+	padding-left:15px;
+	width:10%;
+	display: flex;
+	justify-content: flex-start;
+	}
+	.shoplisttwoo p{
+	font-family: "Cairo", sans-serif;
+	}
+	.shoplisttwot{
+	padding-right:15px;
+	width:75.5%;
+	display: flex;
+	justify-content: space-between;
+	list-style:none;
+  	padding-left:0px;
+	}
+	.shoplisttwot li{
+  	font-family: "Cairo", sans-serif;
+	}
+	.shoplistth{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: flex-start;
+	}
+	.shoplisttho{
+	padding-left:15px;
+	width:10%;
+	display: flex;
+	justify-content: flex-start;
+	}
+	.shoplisttho p{
+	font-family: "Cairo", sans-serif;
+	}
+	.shoplisttht{
+	width:23.27%;
+	display: flex;
+	justify-content: space-between;
+	list-style:none;
+    padding-left:0px;
+	}
+	.shoplisttht li{
+	font-family: "Cairo", sans-serif;
+	}
+	.shoplistfo{
+	padding-top: 10px;
+	padding-bottom: 15px;
+	display: flex;
+	justify-content: flex-start;
+	}
+	.shoplistfoo{
+	padding-left:15px;
+	width:10%;
+	display: flex;
+	justify-content: flex-start;
+	}
+	.shoplistfoo p{
+	font-family: "Cairo", sans-serif;
+	}
+	.shoplistfot {
+	padding-right:15px;
+	width:90%;
+	display: flex;
+	justify-content: space-between;
+	list-style:none;
+    padding-left:0px;
+	}
+	.shoplistfot li{
+	font-family: "Cairo", sans-serif;
+	}
+	.shopliststar{
+	padding-top: 10px;
+	padding-bottom: 15px;
+	display:flex;
+	justify-content: flex-start;
+	}
+	.shopliststarone{
+	padding-left:15px;
+	width:10%;
+	display: flex;
+	justify-content: flex-start;
+	}
+	.shopliststartwo{
+	width:77.5%;
+	display: flex;
+	justify-content: space-between;
+	}
+	.shopliststartwo li{
+	list-style:none;
+	font-family: "Cairo", sans-serif;
+	}
+	.shoplistb{
+	padding-top: 10px;
+	display:flex;
+	justify-content: center;
+	}
+	.shoplistbu{
+	display:flex;
+	justify-content: space-around;
+	padding-bottom: 15px;
+	width: 40%;
+	}
+	.shoplist_but{
+	display: flex;
+	}
+	
+	/*현재 페이지밑 패이지 이동부분*/
+	.product__pagination_center{
+	display: flex;
+	justify-content: center;
+	}
+	/*리뷰 위치조정*/
+	.reviewlist{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}

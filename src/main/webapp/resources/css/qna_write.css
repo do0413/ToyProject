@@ -1,0 +1,275 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[contents]
+1.  body
+2.  info
+	2.1 seller info
+	2.2 
+
+3.  info btn, input 
+-------------------------------------------------------------------*/
+
+
+/*----------------------------------------*/
+/* 1.body
+/*----------------------------------------*/
+body {
+	font-family: "Cairo", sans-serif;
+	/*text-rendering : optimizeLegibility;*/
+	-webkit-font-smoothing : antialiased;
+}
+
+.main_mypage{
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+/*----------------------------------------*/
+/* 2. font
+/*----------------------------------------*/
+
+.qnaboards{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* .qnaboard td{
+	font-size: 13px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:flex-start;
+	align-items: left;
+} */
+
+.qnaboardsl{
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.qnagea{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	flex-direction:column;
+	text-align: left;
+}
+.id_input_box textarea{
+    height: 100%;
+    width: 80%;
+    min-height: 200px;
+}
+.qnaboardsl tr{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.id_input_box {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+}
+
+.id_input_box_t {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	
+}
+.id_input_box_b {
+	width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.qnaboardsl .id_input_box_t ts{
+	width: 150px;
+	height:50px;
+    padding: 15px 0 0 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: center;
+    font-weight:normal;
+  	font-family: "Cairo", sans-serif;
+  	padding-left: 10px;
+}
+
+.qnaboardsl .id_input_box ts{
+	width: 150px;
+	height:50px;
+    padding: 15px 0 0 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: center;
+    font-weight:normal;
+  	font-family: "Cairo", sans-serif;
+}
+
+.qnaboards form{
+	display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #dee2e6;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.qnawrite{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	
+}
+
+.qnawbtn{
+	display: flex;
+	justify-content: flex-end;
+	text-align: center;
+}
+
+
+/* .qnaform .join_btn {
+	width :100%;
+	display: flex;
+	justify-content:space-evenly;
+	align-items: center;
+	margin-top:15px;
+}
+.btn-block{
+		display: flex;
+		width: 180px;
+   	 	height: 50px;
+   	 	text-align: center; 
+}
+.qnaform .btn-jj {
+	width: 180px;
+    height: 50px;
+    background: #7fad39;
+    border: 1px solid #7fad39;
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.qnaform .btn-j {
+	width: 180px;
+    height: 50px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 100, 0,0.6);
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 100, 0,0.7);
+    margin: 0;
+} */
+
+.current{
+	font-size: 13px;	
+}
+
+/*임시방편*/
+
+ .join_btn_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+ .join_btn {
+	width :75%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+ .join_btns {
+	width :100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top :15px;
+	text-align: center;
+}
+
+.qnagea form .add_btn {
+	height:37px;
+	width:75px;
+	text-align: center;
+	/*margin*/
+}
+.btn-jj { 
+    width: 180px;
+    height: 50px;
+    background: #7fad39;
+    border: 1px solid #7fad39;
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color:white;
+    margin-top: 0px;
+}
+
+ .btn-j {
+	width: 180px;
+	height: 50px;
+	background: #ffffff ;
+	border:1px solid rgba(0, 100, 0,0.6);
+	font-family: "Cairo", sans-serif;
+	font-size: 15px;
+	font-weight:bold;
+	border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 100, 0,0.7);
+    margin-top: 0px;
+}
+
+ .join_btn {
+	width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+   
+}
+.linez{
+	border-bottom: 2px solid #dee2e6;
+}

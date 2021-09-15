@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+.likestore{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.card_box {
+	display: flex;
+	/*justify-content: center;
+	align-items: center;*/
+	flex-direction: row;
+	width: 250px;
+	height: 100%;
+	margin
+}
+.row{
+	display:flex;
+	height: 100%;
+	flex-wrap: wrap;
+}
+
+.card {
+	margin-right: 90px;
+}
+
+.container .update {
+	
+	width: 100%;
+	
+}
+
+th{
+	font-size: large;
+}
+
+tr{
+	font-size: medium;
+}
+
+
+.card_box {
+	display: inline;
+	
+}
+.card-body{
+	border: 1px solid rgb(173, 173, 173);
+	width: 100%;
+	height: 100%;
+	margin-left: 50px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+.likecard{
+	position: relative;
+    display: flex;
+    flex-direction: inherit;
+    min-width: 0;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .25rem;
+    width: 100%;
+    height:100%;
+    margin-bottom: 30px;
+}
+
+.card-text {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_item img{
+	width: 100%;
+	height: 200px;;
+	margin-right: 40px;
+	max-height: 100%;
+	flex-wrap: wrap;
+	display: flex;
+	border-radius: 2%;
+}
+.card-bodys{
+	display: flex;
+	justify-content: space-between;
+	
+}
+.product_item{
+	margin-bottom: 50px;
+	border: 1px solid  black;
+	border-radius: 2%;
+}
+
+/*soobin*/
+.reviewboard{
+	width: 100%;
+}
+
+.card-text a{
+	color:black;
+}
+.linez{
+	border-bottom: 2px solid #dee2e6;
+	margin-bottom: 30px;
+}

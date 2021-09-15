@@ -1,0 +1,412 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[contents]
+1.  body
+2.  info
+	2.1 seller info
+	2.2 
+
+3.  info btn, input 
+-------------------------------------------------------------------*/
+
+
+/*----------------------------------------*/
+/* 1.body
+/*----------------------------------------*/
+body {
+	font-family: "Cairo", sans-serif;
+	/*text-rendering : optimizeLegibility;*/
+	-webkit-font-smoothing : antialiased;
+}
+
+.main_mypage{
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+/*----------------------------------------*/
+/* 2. font
+/*----------------------------------------*/
+.update h1 {
+    margin: 0 0 40px 0;
+    font-weight: bold;
+    font-size: 60px;
+    letter-spacing: 3px;
+}
+
+.update h3 {
+   	text-align: center;
+    margin: 0 auto 30px auto;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.update ts {
+	width: 150px;
+	height:50px;
+    padding: 15px 0 0 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+    font-weight:normal;
+  	font-family: "Cairo", sans-serif;
+}
+
+/* .update ts {
+	width: 150px;
+	height:40px;
+    padding: 11px 0 0 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+    font-weight:normal;
+  	font-family: "Cairo", sans-serif;
+}
+ */
+.update .ico{
+	color: red;
+}
+
+/*----------------------------------------*/
+/* 2. 내용크기
+/*----------------------------------------*/
+.update {
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    flex-direction: column;
+}
+
+#update .col-lg-8 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	 
+}
+
+.update form {
+	display: flex;
+	justify-content: flex-start;
+	align-items: left;
+	flex-direction: column;
+	padding-top: 20px;
+	width: 100%;
+
+}
+
+
+/*----------------------------------------*/
+/* 2. 박스크기
+/*----------------------------------------*/
+
+
+.id_input_box {
+	width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+.id_input_box_a {
+	width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.id_input_box_at {
+	width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: -8px;
+}
+
+.id_input_box_s {
+	width: 100%;
+	height: 135px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 4px;
+}
+.id_input_box_p {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+}
+.id_input_box_ps {
+	width: 100%;
+    height: 45px;
+    display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	padding-right: 30px;
+}
+
+.id_input_box_d {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	color: -internal-light-dark(black, white);
+	padding-left: 30px;
+}
+
+.update form input {
+    height: 35px;
+    width: 300px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 3px;
+}
+
+.update .add_input_email {
+	height:42px;
+	width:150px;
+	border: 1px solid  rgb(173, 173, 173);
+	border-radius: 3px;
+	
+}
+
+.update .input_email_sel option{
+	text-align: left;
+	width:20%;
+	font-size: 5px;
+}
+
+.input_emails{
+	display: flex;
+	width:300px;
+}
+.id_input_box_e{
+	width: 150px;
+	display: flex;
+	justify-content: center;
+}
+
+.id_input_box_es{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 15px;
+	padding-bottom: 6px;
+}
+
+.id_input_box_pn{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 6px;
+}
+
+/*----------------------------------------*/
+/* 2. btn
+/*----------------------------------------*/
+
+/*밝은버튼
+.update .btn-jj {
+	width: 180px;
+    height: 50px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 100, 0,0.6);
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(0, 100, 0,0.7);
+}*/
+
+
+.update .btn-jj { 
+    width: 180px;
+    height: 50px;
+    background: #7fad39;
+    border: 1px solid #7fad39;
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+.update .update_btn {
+	width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 45px;
+    margin-top: 20px;
+    padding-top: 20px;
+   
+}
+
+.update form .add_btn {
+	height:35px;
+	width:70px;
+	text-align: justify;
+	/*margin*/
+}
+
+.update form .add_input {
+	height:35px;
+	width: 230px;
+	margin :0 2px 0 0;
+	border: 1px solid  rgb(173, 173, 173);
+	border-radius: 3px;
+	
+	/*text-align: center;
+	margin*/
+}
+
+.id_id{
+	display: flex;
+	justify-content: center;
+align-item: center;
+}
+
+/*아이콘*/
+.update .ico_email{
+	font-size: 15px;
+	margin: auto 2.5px;
+}
+
+.update .add_input_email_se{
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff;
+    border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    text-align:center;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: 134px;
+}
+
+.reviewlis{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/*soobin*/
+.updateLIST{
+	
+}
+.reviewboard{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+/*이벤트 페이지 관련*/
+.qnaList{
+	width: 100%;
+    height: 100%;
+    flex-direction:column;
+}
+.rowNotice{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.qnaList .table thead tr th,
+.qnaList .table tbody tr td{
+	text-align: center;
+}
+.qnaListn{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+.updateform_info{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	
+}
+
+.btn button{
+ 	width: 180px;
+    height: 50px;
+    background: #7fad39;
+    border: 1px solid #7fad39;
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+   	text-align: center;
+   	align-items: center;
+}
+.product__pagination{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.linez{
+	border-bottom: 2px solid #dee2e6;
+}

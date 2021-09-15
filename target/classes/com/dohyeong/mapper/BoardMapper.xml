@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	 
+<mapper namespace="com.dohyeong.mapper.BoardMapper">
+	<!-- 조회 -->
+	<select id="getList" resultType="com.dohyeong.domain.BoardVO">
+	<![CDATA[
+			select * from tbl_board where bno>0 order by bno DESC	
+			]]>
+	</select>
+	<select id="read" resultType="com.dohyeong.domain.BoardVO">
+		select * from tbl_board where bno= #{bno} 	
+	</select>
+	
+	<insert id="Register"  >
+		insert into tbl_board (bno, writer, title, content)
+		values (seq_board.nextval, #{writer}, #{title}, #{content})
+	</insert>
+	
+	<update id="boardupdate">
+		update tbl_board
+		set title = #{title},
+		content = #{content},
+		writer = #{writer},
+		updateDate = sysdate
+		where bno = #{bno}
+	</update>
+	
+	<delete id="remove">
+		delete from tbl_board where bno=#{bno}
+	</delete>
+	
+	
+</mapper>	

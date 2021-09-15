@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 0px;
+    border: 5px solid #585858;
+    width: 1150px; /* Could be more or less, depending on screen size */    
+    height: 700px;                       
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h3 {
+	font-size: 30px;
+    color: #1c1c1c;
+    font-weight: 700;
+    font-family: "Cairo", sans-serif;
+    margin: 10px 0 20px 0;
+    text-align: center;
+    color: black;
+}
+
+.modal-content ts {
+	margin-left:20px;
+	width: 120px;
+	/*height: */
+}
+
+.modal-textbox-ti ts {
+	margin-left:10px;
+	width: 120px;
+	/*height: */
+}
+
+.modal-textbox td {
+	width: 180px;
+	/*height: */
+}
+
+.modal-textbox {
+	display: flex;
+	/*justify-content: space-around;*/
+	align-items: center;
+	height: 34px;
+}
+
+.modal-textbox-s {
+	display: flex;
+	justify-content:flex-start;
+	align-items: center;
+	height: 34px;
+	width:380px;
+}
+
+.modal-textbox-ad {
+	display: flex;
+	justify-content:flex-start;
+	align-items: center;
+	height: 34px;
+	width:450px;
+}
+
+.modal-textbox-ti {
+	display: flex;
+	justify-content:flex-start;
+	align-items: center;
+	height: 34px;
+	width:270px;
+}
+
+/*.modal-textbox-ss {
+	display: flex;
+	justify-content:flex-start;
+	align-items: center;
+	height: 34px;
+	width:570px;
+}*/
+
+.modal-imgbox{
+	display: flex;
+	justify-content:flex-start;
+	flex-direction: row;
+}
+
+.modal-imgbox-ss {
+	display: flex;
+	/*justify-content: space-around;*/
+	align-items: center;
+	flex-direction: column;
+	width:570px;
+	/*height: 34px;*/
+}
+
+.modal-textbox input {
+	width: 200px;
+}
+
+.modal-textbox-ad input {
+	width: 280px;
+}
+
+.modal-content ol {
+	margin: 20px 0 40px 0;
+}
+
+/*------------------
+	버튼
+-------------------*/
+
+.form-checkkkk {
+	display: flex;
+	/*flex-direction:column;*/
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin : 30px auto;
+	/*text-align: left;*/
+	
+}
+
+.form-checkkkk .btn {
+	border-radius: 3px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 20px;
+	width: 310px;
+	height: 60px;
+	margin :0 20px;
+	/*padding: 14px;*/
+	/*background-color: rgba(0, 100, 0,0.7);*/
+	color: #ffffff;
+	background-color: #7fad39;
+	border: 1px solid #7fad39;
+}
+
+.form-checkkkk .btn-j {
+	border-radius: 3px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 20px;
+	width: 310px;
+	height: 60px;
+	margin :0 20px;
+	/*padding: 14px;*/
+	/*background-color: rgba(0, 100, 0,0.7);*/
+	color: #ff1900;
+	background-color:#ffffff;
+	border: 1px solid #ff1900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

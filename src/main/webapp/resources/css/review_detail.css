@@ -1,0 +1,25 @@
+@charset "UTF-8";
+ #review_title1{
+ font-size:15px;
+ }
+ .container-fluid .row .col-md-8 cc_cursor #review_detail_con{
+ display : flex;
+ aligin-items : center;
+ justify-content : center;
+ }
+ #review_member_data{
+ 
+}
+ #review_detail{
+ width : 1140px;
+ margin-top :50px;
+ }
+ #membernick{
+ font-size : 15px;
+ 
+ }
+ #review_date{
+  font-size : 15px;
+ }
+
+ 

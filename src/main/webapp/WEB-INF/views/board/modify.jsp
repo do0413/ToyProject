@@ -28,7 +28,8 @@
 			name="qnaform">
 			<div class="id_input_box_t">
 				<td><input type="hidden" name="bno"
-					value="<%=getboard.getBno()%>" /> <ts> 글쓴이 </ts>
+					value="<%=getboard.getBno()%>"  /> 
+				<ts> 글쓴이 </ts>
 				<td><input name="writer" type="text"
 					value="<%=getboard.getWriter()%>" readonly="readonly" size="50"
 					maxlength="100" /></td>
@@ -45,14 +46,11 @@
 
 		 <div class="join_btns">
 				<div class="join_btn"> 
-					<button type="submit" data-oper='ha' class="site-btn" id="checkBtn">수정완료</button>
-					<!-- <button type="submit" data-oper='delete' class="site-btn"
-						id="checkBtn" style="background-color: red; opacity: 80%;">글
-						삭제</button> -->
-					<button type="button" onclick="eventBtn()" class="site-btn"
-						id="checkBtn" style="background-color: red; opacity: 80%;">글
-						삭제</button>
-					<button type="button" class="site-btn" id="checkBtn"
+					<button type="submit" data-oper='modify' class="site-btn" id="checkBtn">수정완료</button>
+					<button type="submit" data-oper='delete' class="site-btn"
+						id="checkBtnmm" style="background-color: red; opacity: 80%;" >
+						글삭제</button>
+					<button type="button" data-oper='list' class="site-btn" id="checkBtn"
 						onClick="history.go(-1)">리스트로</button>
 				</div>
 			</div> 
@@ -66,30 +64,53 @@
 
 <!-- End Channel Plugin -->
 <%@include file="../includes/footer.jsp"%>
-<script>
-        function eventBtn() {
-       
-        	    /* let f = document.createElement('form'); */
-           		 let f = document.getElementsByTagName('form'); 
-           		//let f = document.getElementsByClassName('join_btn');
-           		let obj;
-           		
-           		obj = document.getElementsByClassName('id_input_box_t');
-        	    obj.setAttribute('type', 'hidden');
-        	    obj.setAttribute('name', 'bno');
-        	    obj.setAttribute('value', bno);
- 	    
-        	    f.appendChild(obj);
-        	    f.setAttribute('method', 'post');
-        	    f.setAttribute('action', '/board/remove');
-        	    document.body.appendChild(f);
-        	    f.submit();
+<!-- 
+<script type="text/javascript">
+	function deletebtn(bno){
+		var bno = bno;
+		
+		$.ajax({
+ 			type: "POST",
+ 			url : "/board/remove",
+ 			contentType:'application/x-www-form-urlencoded;charset=utf-8',
+ 			dataType: "json",
+ 			data : {bno : bno},
+ 			//data : sendData,
+ 			success: function(results){
+ 	            
+ 	               alert("파인더평가가 완료 되지 않았습니다.insertFail");
+ 	        	
+ 			},
+ 			error: function(){
+ 			}
+ 		})
+		
+	}
+	
+	$(document).ready(function(){
+		
+		$("#checkBtnmm").click(function(){
+			var bno = $(this).attr('Bbno'); 
+			let sendData = "Bbno="+$('input[bno=value]').val();   //폼의 이름 값을 변수 안에 담아줌
+			$.ajax({
+	 			type: "POST",
+	 			url : "/board/remove",
+	 			contentType:'application/x-www-form-urlencoded;charset=utf-8',
+	 			//dataType: "json",
+	 			//data : {bno : bno},
+	 			data : sendData,
+	 			success: function(results){
+	 				alert(results.msg);				
+	 			},
+	 			error: function(data){
+	 				alert("에러 발생. " + data);
+	 			}
+	 		})
+		});
+	});  
+</script>-->
 
-           
-        }
-</script>
-
-<!--  <script type="text/javascript">
+ <script type="text/javascript">
 	$(document).ready(function() {
 		var formObj = $("form");
 		$('button').on("click", function(e) {
@@ -102,12 +123,12 @@
 
 			if (operation === 'delete') {
 				formObj.attr("action", "/board/remove");
-			} else {
-				self.location = "/board/list";
+			} else if(operation === 'list'){
+				self.location = "/board/boardlist";
 				return;
 			}
 			formObj.submit();
 		});
 	});
-</script>  -->
+</script>
 <%-- <script src="${pageContext.request.contextPath}/resources/js/test.js"/> --%>

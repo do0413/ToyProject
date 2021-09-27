@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.dohyeong.mapper.BoardMapper;
 
 import com.dohyeong.domain.BoardVO;
+import com.dohyeong.domain.Criteria;
 
 import lombok.AllArgsConstructor;
 
@@ -56,5 +57,12 @@ public class BoardServiceImpl implements BoardService {
 		System.out.println("--remove serviceimpl--");
 		return mapper.remove(board);
 	}
+
+	//pageing
+//	@Override
+//	public List<BoardVO> getpageList(Criteria cri) {
+//		System.out.println("--pageing serviceimpl--");
+//		return mapper.getpageList(cri);
+//	}
 
 }

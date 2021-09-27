@@ -12,6 +12,12 @@
 	<select id="read" resultType="com.dohyeong.domain.BoardVO">
 		select * from tbl_board where bno= #{bno} 	
 	</select>
+	<select id="getpageList" resultType="com.dohyeong.domain.BoardVO">
+	<![CDATA[
+			select * from tbl_board where bno>0 order by bno DESC	
+			]]>
+	</select>
+	
 	
 	<insert id="Register"  >
 		insert into tbl_board (bno, writer, title, content)

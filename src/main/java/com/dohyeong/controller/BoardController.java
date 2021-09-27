@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.dohyeong.domain.BoardVO;
+import com.dohyeong.domain.*;
 import com.dohyeong.service.BoardService;
 
 import lombok.AllArgsConstructor;
@@ -23,13 +24,22 @@ public class BoardController {
 	private BoardService service;
 	
 	//메인페이지>게시판리스트보기
+	//페이징처리
 	@RequestMapping(value="/board/boardlist")
-	public String BoardList(Model model) {
+	public String BoardList(Criteria cri, Model model) {
 		model.addAttribute("list", service.getList());
+		model.addAttribute("pageMaker", new PageDTO(cri,123));
 		System.out.println("aaa");
 		
 		return "board/boardlist";
 	}
+	
+	/*
+	 * // @RequestMapping(value="/board/boardlist") // public String BoardList(Model
+	 * model) { // model.addAttribute("list", service.getList()); //
+	 * System.out.println("aaa"); // // return "board/boardlist"; // }
+	 */	
+	
 	
 	//게시판리스트>등록페이지
 	//requestmapping이 얘앞에 board를 넣어줬었다. 근데 밑에 redirect사용으로인해 클래스위에선언한걸지우고 그냥 각자 넣어주기로함.
@@ -115,5 +125,13 @@ public class BoardController {
 			return null;
 		}
 	}
+	
+	//페이징처리
+	//@GetMapping("/board/list")
+	//public void list(Criteria cri, Model model) {
+	//	System.out.println("---pageing---controller---");
+	//	model.addAttribute("list", service.getpageList(cri));
+	//	model.addAttribute("pageMaker", new PageDTO(cri,123));
+	//}
 
 }

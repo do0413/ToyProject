@@ -7,7 +7,82 @@
 <link rel="stylesheet"
    href="${pageContext.request.contextPath}/resources/css/mainPage.css"
    type="text/css">
-   
+
+<!-- header -->
+<!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> do0413do@colorlib.com</li>
+                                <li>안녕하세요.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            
+                            <div class="header__top__right__auth">
+                                <a href="#" style=" margin: 0px;"><i class="fa fa-user" ></i> 로그인</a>
+                                <a href="#">회원가입</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <nav class="header__menu">
+                        <ul style="width: 509px;">
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./shop-grid.html">Shop</a></li>
+                            <li><a href="#">Pages</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">Shop Details</a></li>
+                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                                    <li><a href="./checkout.html">Check Out</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+
 <!-- Hero Section Begin -->
 <!-- Hero 좌측 네비 -->
 <section class="hero">
@@ -19,7 +94,9 @@
                   <i class="fa fa-bars"></i> <span>All departments</span>
                </div>
                <ul>
-               	<li><a href="./boardlist">게시판 보기</a></li>
+               	<li><a href="/board/boardlist">게시판</a></li>
+               	
+               	
                   <li><a href="./storeList.st">전체가게 보기</a></li>
                   <li><a href="./reviewList.re">전체리뷰 보기</a></li>
                   <li><a href="noticelist.no">공지사항</a></li>

@@ -315,7 +315,7 @@ ol {
 -----------------------*/
 
 /*-----------------
-  1. 박스
+  1. 諛뺤뒪
 -----------------*/
 .hero__categories li {
 	width: 220px;
@@ -333,7 +333,7 @@ ol {
 
 
 /*-----------------
-  2. 이미지크기
+  2. �씠誘몄��겕湲�
 -----------------*/
 .header__logo a .mainlogo_img{
 	width: 261.99px;
@@ -537,7 +537,9 @@ ol {
 
 .header__menu {
 	padding: 40px 50px 40px 0px;
+	
 }
+
 
 
 
@@ -546,6 +548,7 @@ ol {
 	display: inline-block;
 	margin-right: 50px;
 	position: relative;
+	
 }
 
 .header__menu ul li .header__menu__dropdown {

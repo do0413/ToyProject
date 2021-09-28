@@ -51,15 +51,17 @@
 	<div class='product__pagination'>
 		<c:if test="${pageMaker.prev}">
 			<class="pageinate_button previous">
-			<a herf="${pageMaker.startPage -1}">Pre</a>
+			<a href="${pageMaker.startPage -1}">Pre</a>
 		</c:if>
 		<c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
-			<class="paginate_button" ${pageMaker.cri.pageNum ==num ? "active" : "" }"><a href="${num}">${num}</a>
+			<div class="pageinate_button" ${pageMaker.cri.pageNum ==num ? " active" : "" }">
+				<a href="${num}">${num}</a>
+			</div>
 		</c:forEach>
 		
 		<c:if test="${pageMaker.next}">
 			<div class="pageinate_button next">
-			<a herf="${pageMaker.endPage +1 }">Next</a></div>
+			<a href="${pageMaker.endPage +1 }">Next</a></div>
 		</c:if>
 	</div>
 
@@ -72,6 +74,7 @@
 		</div>
 	</div>
 	
+	<!--페이지 번호를 누를때마다 해당 값이 바뀐다.  -->
 	<form id='actionForm' action="/board/list" method='get'>
 		<input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum }'>
 		<input type='hidden' name='amount' value='${pageMaker.cri.amount }'>
@@ -88,10 +91,11 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		var actionForm = $("#actionForm");
-		$(".paginate_button a").on("click", function(e) {
+		$(".pageinate_button a").on("click", function(e) {
 			e.preventDefault();
 			console.log('click');
 			actionForm.find("input[name='pageNum']").val($(this).attr("href"));
+			actionForm.submit();
 		});
 	});
 

@@ -16,10 +16,15 @@ public class BoardServiceImpl implements BoardService {
 
 	private BoardMapper mapper;
 	
+	/*
+	 * @Override public List<BoardVO> getList() {
+	 * System.out.println("--service getlist--"); return mapper.getList(); }
+	 */
 	@Override
-	public List<BoardVO> getList() {
-		System.out.println("--service getlist--");
-		return mapper.getList();
+	public List<BoardVO> getList(Criteria cri) {
+		System.out.println("--service getlist--"); 
+		return mapper.getList(cri);
+		
 	}
 
 	@Override
@@ -57,6 +62,8 @@ public class BoardServiceImpl implements BoardService {
 		System.out.println("--remove serviceimpl--");
 		return mapper.remove(board);
 	}
+
+	
 
 	//pageing
 //	@Override

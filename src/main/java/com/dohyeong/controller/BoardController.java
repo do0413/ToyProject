@@ -25,13 +25,16 @@ public class BoardController {
 	
 	//메인페이지>게시판리스트보기
 	//페이징처리
-	@RequestMapping(value="/board/boardlist")
-	public String BoardList(Criteria cri, Model model) {
-		model.addAttribute("list", service.getList());
+	//@RequestMapping(value="/board/boardlist")
+	@GetMapping("/board/boardlist")
+	//public String BoardList( Model model)
+	public void BoardList(Criteria cri, Model model) {
+		//model.addAttribute("list", service.getList());
+		model.addAttribute("list", service.getList(cri));
 		model.addAttribute("pageMaker", new PageDTO(cri,123));
 		System.out.println("aaa");
 		
-		return "board/boardlist";
+		//return "board/boardlist";
 	}
 	
 	/*

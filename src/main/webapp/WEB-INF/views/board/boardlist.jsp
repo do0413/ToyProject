@@ -75,9 +75,10 @@
 	</div>
 	
 	<!--페이지 번호를 누를때마다 해당 값이 바뀐다.  -->
-	<form id='actionForm' action="/board/list" method='get'>
+	<form id='actionForm' action="/board/boardlist" method='get'>
 		<input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum }'>
 		<input type='hidden' name='amount' value='${pageMaker.cri.amount }'>
+		<input type='hidden' name='amount' value='<c:out value="${cri.amount }"/>'>
 	</form>
 
 </div><!--class="col-lg-9" end  -->

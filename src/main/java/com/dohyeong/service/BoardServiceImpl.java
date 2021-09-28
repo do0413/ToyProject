@@ -26,6 +26,12 @@ public class BoardServiceImpl implements BoardService {
 		return mapper.getList(cri);
 		
 	}
+	
+	@Override
+	public int getTotal(Criteria cri) {
+		
+		return mapper.getTotalCount(cri);
+	}
 
 	@Override
 	public int Register(BoardVO board) {
@@ -62,6 +68,8 @@ public class BoardServiceImpl implements BoardService {
 		System.out.println("--remove serviceimpl--");
 		return mapper.remove(board);
 	}
+
+	
 
 	
 

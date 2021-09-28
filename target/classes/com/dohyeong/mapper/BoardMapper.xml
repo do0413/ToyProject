@@ -20,10 +20,14 @@
 					from
 						tbl_board
 					where rownum <= #{pageNum} * #{amount}
+					order by bno DESC
 				)
 			where rn>(#{pageNum}-1)* #{amount}
-			order by bno DESC
+			
 		]]>
+	</select>
+	<select id="getTotalCount" resultType="int">
+		select count(*) from tbl_board where bno >0
 	</select>
 	<select id="read" resultType="com.dohyeong.domain.BoardVO">
 		select * from tbl_board where bno= #{bno} 	

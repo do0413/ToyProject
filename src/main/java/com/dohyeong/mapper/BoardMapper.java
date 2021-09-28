@@ -9,6 +9,8 @@ public interface BoardMapper {
 	
 	//public List<BoardVO> getList();
 	public List<BoardVO> getList(Criteria cri);
+	public int getTotalCount(Criteria cri);
+	
 	public int Register(BoardVO board);
 	public BoardVO read(Long bno);
 	public int modify(BoardVO board);

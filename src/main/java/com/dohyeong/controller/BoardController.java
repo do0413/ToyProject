@@ -31,8 +31,11 @@ public class BoardController {
 	public void BoardList(Criteria cri, Model model) {
 		//model.addAttribute("list", service.getList());
 		model.addAttribute("list", service.getList(cri));
-		model.addAttribute("pageMaker", new PageDTO(cri,123));
-		System.out.println("aaa");
+		
+		int total=service.getTotal(cri);
+		//model.addAttribute("pageMaker", new PageDTO(cri,123));
+		model.addAttribute("pageMaker", new PageDTO(cri,total));
+		System.out.println("--boardlist controller--");
 		
 		//return "board/boardlist";
 	}

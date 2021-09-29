@@ -33,7 +33,7 @@
                             
                             <div class="header__top__right__auth">
                                 <a href="#" style=" margin: 0px;"><i class="fa fa-user" ></i> 로그인</a>
-                                <a href="#">회원가입</a>
+                                <a href="/member/joinForm">회원가입</a>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <nav class="header__menu">
+                    <nav class="header__menu" style="padding-left: 30px;">
                         <ul style="width: 509px;">
                             <li class="active"><a href="./index.html">Home</a></li>
                             <li><a href="./shop-grid.html">Shop</a></li>

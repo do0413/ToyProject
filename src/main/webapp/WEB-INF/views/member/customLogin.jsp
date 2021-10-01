@@ -23,16 +23,19 @@
 			<div class="login">
 
 				<h1>Login</h1>
+				<h2><c:out value="${error }"/></h2>
+				<h2><c:out value="${logout }"/></h2>
 
-				<!-- Login form -->
-				<form name="loginForm" action="./login.me" method="post">
+				<!-- Login form : post방식으로 전송해야 합니다. -->
+				<!-- /login이라는 속성값으로 login-page을 이용할수 있습니다. -->
+				<form name="loginForm" action="/login" method="post">
 					<div class="form-group">
-						<input type="text" class="form-control" name="u_id"
-							aria-describedby="id" placeholder="Enter id">
+						<input type="text" class="form-control" name="u_iddd"
+							 value="admin">
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" name="u_pw"
-							placeholder="Password">
+						<input type="password" class="form-control" name="u_pppw"
+							value="admin">
 					</div>
 					<br>
 					<div class="form-checkkk">
@@ -42,6 +45,7 @@
 							onClick="location.href='./joinForm.me'">회원가입</button>
 						<br>
 					</div>
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token }" />
 				</form>
 				<!-- End Login form -->
 

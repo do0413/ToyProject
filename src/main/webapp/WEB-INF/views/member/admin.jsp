@@ -9,5 +9,6 @@
 <body>
 <!-- all or member or admin -->
 <h1>/member/admin page</h1>
+<a href="/member/customLogout">LOGOUT</a>
 </body>
 </html>

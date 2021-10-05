@@ -7,8 +7,10 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="customAccessDenied" class="com.dohyeong.security.CustomAccessDeniedHandler"></bean>
+	<bean id="customLoginSuccess" class="com.dohyeong.security.CustomLoginSuccessHandler"></bean>
 	
-	<security:http auto-config="true" use-expressions="true">
+	<!-- <security:http auto-config="true" use-expressions="true"> -->
+	<security:http>
 		<security:intercept-url pattern="/member/all" access="permitAll"/>
 		<!-- /sample/memeber라는 URI는 ROLE_MEMEBER라는 권한이 있는 사용자만 접근할 수 있다. -->
 		<security:intercept-url pattern="/member/member" access="hasRole('ROLE_MEMBER')"/>
@@ -20,7 +22,9 @@
 		<security:access-denied-handler ref="customAccessDenied"/>
 		
 		<!-- <security:form-login/> -->
-		<security:form-login login-page="/member/customLogin"/>
+		<security:form-login login-page="/member/customLogin" authentication-success-handler-ref="customLoginSuccess"/>
+		<!-- logout 처리 -->
+		<security:logout logout-url="/member/customLogout" invalidate-session="true"/>
 	</security:http>
 	
 	<security:authentication-manager>

@@ -86,7 +86,7 @@ public class MemberTests {
 					pstmt.setString(2, "ROLE_MEMBER");
 				}else {
 					pstmt.setString(1, "admin" +i);
-					pstmt.setString(2, "ROLE_ADNIN");
+					pstmt.setString(2, "ROLE_ADMIN");
 				}
 				
 				pstmt.executeUpdate();

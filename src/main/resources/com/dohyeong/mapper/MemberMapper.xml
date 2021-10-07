@@ -23,7 +23,9 @@
 		SELECT 
 			mem.userid, userpw, username, enabled, regdate, updatedate, auth
 		FROM
-			 tbl_member mem LEFT OUTER JOIN tbl_member_auth auth on mem.userid=auth.userid
+			 tbl_member mem LEFT OUTER JOIN 
+			 tbl_member_auth auth 
+			 on mem.userid=auth.userid
 		WHERE mem.userid = #{userid}
 	</select>
 	

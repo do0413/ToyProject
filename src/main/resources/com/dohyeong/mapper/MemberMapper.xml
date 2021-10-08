@@ -11,7 +11,7 @@
 		<result property="userName" column="username"/>
 		<result property="regDate" column="regdate"/>
 		<result property="updateDate" column="updatedate"/>
-		<collection property="authList" column="authMap"></collection>				
+		<collection property="authList" resultMap="authMap"></collection>				
 	</resultMap>
 	
 	<resultMap type="com.dohyeong.domain.AuthVO" id="authMap">

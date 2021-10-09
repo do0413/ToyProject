@@ -30,12 +30,10 @@
 				<!-- /login이라는 속성값으로 login-page을 이용할수 있습니다. -->
 				<form action="/login" method="post">
 					<div class="form-group">
-						<input type="text" class="form-control" name="username"
-							 value="admin">
+						<input type="text" class="form-control" name="username" value="admin">
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" name="password"
-							value="admin">
+						<input type="password" class="form-control" name="password" value="admin">
 					</div>
 					<br>
 					<div class="form-checkkk">

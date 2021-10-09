@@ -30,6 +30,7 @@ public class MemberTests {
 	@Setter(onMethod_ = @Autowired)
 	private DataSource ds;
 	
+	/* 디비에 맴버 추가하는 코드*/
 	@Test
 	public void testInsertMember() {
 		String sql="insert into tbl_member(userid, userpw, username) values(?,?,?)";

@@ -16,11 +16,11 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 	
 	@Override
 	public void handle(HttpServletRequest request, 
-			HttpServletResponse response, AccessDeniedException accessDeniedException) 
+			HttpServletResponse response, AccessDeniedException accessException) 
 			throws IOException, ServletException {
 		
 				log.error("Access Denide Handler");
-				log.error("edirect....");
+				log.error("Redirect....");
 				
 				response.sendRedirect("/member/accessError");
 		

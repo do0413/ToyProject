@@ -27,8 +27,15 @@
 		
 		<!-- <security:form-login/> -->
 		<security:form-login login-page="/member/customLogin" authentication-success-handler-ref="customLoginSuccess"/>
+		
 		<!-- logout 처리 -->
-		<security:logout logout-url="/member/customLogout" invalidate-session="true"/>
+		<!-- <security:logout logout-url="/member/customLogout" invalidate-session="true"/> -->
+		
+		<!-- 쿠키 기억하기 -->
+		<security:remember-me data-source-ref="dataSource" token-validity-seconds="604800"/>
+		
+		<!-- logout 처리 -->
+		<security:logout logout-url="/member/customLogout" invalidate-session="true" delete-cookies="remember-me, JESSION_ID"/>
 	</security:http>
 	
 	

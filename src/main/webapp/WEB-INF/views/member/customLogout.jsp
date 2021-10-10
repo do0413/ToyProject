@@ -12,7 +12,7 @@
 <body>
 	<h1>---logout page----</h1>
 	
-	<form action="/member/customLogin" method='post'>
+	<form action="/member/customLogout" method='post'>
 		<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }"/>
 		<button>로그아웃</button>
 	</form>

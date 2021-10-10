@@ -1,8 +1,14 @@
 package com.dohyeong.service;
 
-import com.dohyeong.domain.MemberVO;
+
+import org.springframework.stereotype.Service;
+
 import com.dohyeong.mapper.MemberMapper;
 
+import lombok.AllArgsConstructor;
+
+@Service
+@AllArgsConstructor
 public class MemberServiceImpl implements MemberService {
 
 	private MemberMapper mapper;

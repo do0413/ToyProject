@@ -49,11 +49,14 @@ public class MemberController {
 	private MemberService service;
 
 	// id 중복 체크 컨트롤러
-	@GetMapping(value = "/member/idCheck")
+	//@GetMapping("/member/idCheck")
+	@RequestMapping("/member/idCheck")
 	//@ResponseBody
 	public int idCheck(@RequestParam("userId") String userid) {
-		System.out.println("--idcheck controller--");
+		System.out.println("--idcheck controller--" + userid );
+		//System.out.println("--idcheck controller--");
 		return service.userIdCheck(userid);
+		//return reg_service.userIdCheck(user_id);
 	}
 
 	

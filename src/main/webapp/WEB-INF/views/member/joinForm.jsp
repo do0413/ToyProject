@@ -19,89 +19,66 @@
         	<div class="join">
  				<h1>JOIN</h1>
             <!-- join form -->
-         	<form name="joinform" action="./joinProcess.me" method="post">
-         		<div class="id_input_box">
-         			<ts>아이디<span class="ico">*</span> </ts>
-         	 		<td><input type="text"  name="u_id" placeholder="숫자와 영어를 포함 4~10자리내로 입력하세요." style="font-size:13px;" /></td> <!-- name="u_id"  -->
+         	<form name="joinform" action="member/joinProcess" method="post">
+         		
+         	 	<div class="id_input_box">
+	         		<ts>아이디<span class="ico">*</span> </ts>
+	         	 	<td><input type="text"  class="add_input" id="userid" name="userid" placeholder="숫자와 영어를 포함 4~10자리내로 입력하세요." style="font-size:13px;" /></td> <!-- name="u_id"  -->
+	         	 	<input class="add_btn" type="button"  value="중복 확인" style="font-size:13px; onclick="id_overlap_check()"/>
          	 	</div>
+         	 	<div class="check_font" id="id_check"></div>
          	 	
          	 	<div class="id_input_box">
          	 		<ts>비밀번호<span class="ico">*</span>  </ts>
-         	 		<td><input type="password" name="u_pw" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
+         	 		<td><input type="password" name="userpw" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
          	 	</div>
          	 	
          	 	<div class="id_input_box">
 	         	 	<ts>비밀번호 확인<span class="ico">*</span>   </ts>
-	         	 	<td><input type="password" name="u_pw2" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
-         	 	</div>
-         	 	
-         	 	<div class="id_input_box">
-	         	 	<ts>이름<span class="ico">*</span>   </ts>
-	         	 	<td><input type="text" name="u_name" placeholder="이름을 입력하세요." style="font-size:13px;"/></td>
+	         	 	<td><input type="password" name="userpw2" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
          	 	</div>
          	 	
          	 	<div class="id_input_box">
 	         	 	<ts>닉네임<span class="ico">*</span>   </ts>
-	         	 	<td><input type="text" name="u_nick" placeholder="이름을 입력하세요." style="font-size:13px;"/></td>
+	         	 	<td><input class="add_input" type="text" name="userNick" placeholder="사용할 닉네임을 입력하세요." style="font-size:13px;"/></td>
+	         	 	<input class="add_btn" type="button"  value="중복 확인" style="font-size:13px; onclick="id_overlap_check()"/>
          	 	</div>
          	 	
+         	 	<br>
          	 	<div class="id_input_box">
+	         	 	<ts>이름<span class="ico">*</span>   </ts>
+	         	 	<td><input type="text" name="userName" placeholder="이름을 입력하세요." style="font-size:13px;"/></td>
+         	 	</div>
+         	 	
+         	 	<!-- <div class="id_input_box">
 	         	 	<ts>생년월일<span class="ico">*</span></ts>
 	         	 	<td><input type="text" name="u_birth" placeholder="생년월일 8자리를 입력하세요.(예: 19990120)" style="font-size:13px;"/></td>
-         	 	</div>
+         	 	</div> -->
          	 	
          	 	<div class="id_input_box_s">
          	 		<div class="id_input_box">
 		         	 	<ts>주소<span class="ico">*</span></ts>
-		         	 	<td><input class="add_input" type="text" id="u_post" name="u_post" placeholder="우편번호" style="font-size:13px;"/>
+		         	 	<td><input class="add_input" type="text" id="userpost" name="userpost" placeholder="우편번호" style="font-size:13px;"/>
 		         	 		<input class="add_btn" type="button" onclick="execDaumPostcode()" value="우편번호찾기" style="font-size:10px;"/></td>
 		         	 </div>
 		         	 <div class="id_input_box">
 		         		 <ts> </ts>
-		         	 	<td><input  type="text" id="u_addr" name="u_addr" placeholder="주소" style="font-size:13px;"/></td>
+		         	 	<td><input  type="text" id="u_addr" name="userAddr" placeholder="주소" style="font-size:13px;"/></td>
 		         	 </div>
 		         	 <div class="id_input_box">		
 		         	 	<ts> </ts>
-		         	 	<input type="text" id="u_addr" name="u_addr" placeholder="상세주소" style="font-size:13px;"/></td>
+		         	 	<input type="text" id="u_addr" name="userAddr" placeholder="상세주소" style="font-size:13px;"/></td>
 	         	 	</div>
          	 	</div>
-         	 
-         		
-         	 	<div class="id_input_box">
-		         	<ts>이메일<span class="ico">*</span></ts>
-		         	 <td><input class="add_input_email" type="text" name="u_email"/><span class="ico_email" style="font-size:13px;">@</span>
-		         	 <select class="add_input_email_se" name="u_email" width="110px"> 
-		         	 		<option value="">메일주소선택</option>
-							<option value="@naver,com">naver.com</option>
-							<option value="@hanmail.net">hanmail.net</option>
-							<option value="@daum.net">daum.net</option>
-							<option value="@gmail.com">gmail.com</option>
-							<option value="@nate.net">nate.net</option>
-					</select>
-					</td>
-         	 	</div>
          	 	
-         	 	<div class="id_input_box">
-         	 	<ts>전화번호<span class="ico">*</span></ts>
-         	 	<td><input type="text" name="u_phone" style="font-size:13px;"/></td>
-         	 	</div>
-         	 	
-         	 	<div class="id_input_box">
-         	 	<ts>약관동의<span class="ico">*</span></ts>
-         	 	<div class="input_box_box">
-		         	<td><input class="radio_input" type="radio" name="u_agree" value="1" checked/><span class="ico_ag">동의</span></td>
-		         	<td><input class="radio_input" type="radio" name="u_agree" value="0"/><span class="ico_ag">비동의</span></td>
-		     	</div>
-		      </div>
-		         	 	
-         	 	<div class="id_input_box">
-         	 		<ts>고객 유형<span class="ico">*</span></ts>
-         	 		<div class="input_box_box">
-         	 			<td><input class="radio_input" type="radio" name="seller_key" value="1" checked/><span class="ico_ag">판매자</span></td>
-        		 		<td><input class="radio_input" type="radio" name="seller_key" value="0"/><span class="ico_ag">일반고객</span></td>
-         			</div>	
-         	 	</div>
-         	 	
+         	 	 <div class="id_input_box">
+	         	 	<ts>개인정보 약관<span class="ico">*</span></ts>
+	         	 	<div class="input_box_box">
+			         	<td><input class="radio_input" type="radio" name="u_agree" value="1" checked/><span class="ico_ag">동의</span></td>
+			         	<td><input class="radio_input" type="radio" name="u_agree" value="0"/><span class="ico_ag">비동의</span></td>
+			     	</div>
+		      	</div> 
+		        
          	 	<!-- 
          	 	 <a href="#" onclick="check_input()">회원가입</a>&nbsp;&nbsp;
          		<a href="javascript:joinform.reset()">다시작성</a>
@@ -134,11 +111,14 @@
   <!-- Js Plugins -->
  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
- <script type="text/javascript">
  
-
+ 
+ 
+ <script type="text/javascript">
  var birthExp = /^\d{8}$/;
-
+ /* ------------------------------------------------------------- */
+ /* https://postcode.map.daum.net/guide#usage (사용자가 선택한 값 이용하기) */
+ /* ------------------------------------------------------------- */
 function execDaumPostcode() {
    new daum.Postcode({
        oncomplete: function(data) {
@@ -246,7 +226,10 @@ function check_input() {
  joinform.submit();
 }
 
-$(function(){
+/* ------------------------------------------------------------- */
+/* -------------- 아이디 중복 체크하기 --------------------------------- */
+/* ------------------------------------------------------------- */
+/* $(function(){
  //아이디 중복체크
      $('#u_id').blur(function(){
          $.ajax({
@@ -268,7 +251,47 @@ $(function(){
              },
         }) 
       })
- });
+ }); */
+	$("#userid").blur(function() {
+		
+		var userid = $('#userid').val();
+		$.ajax({
+			url : '${pageContext.request.contextPath}/member/idCheck?userId='+ userid,
+			type : 'get',
+			success : function(data) {
+				console.log("1 = 중복o / 0 = 중복x : "+ data);							
+				
+				if (data == 1) {
+						// 1 : 아이디가 중복되는 문구
+						$("#id_check").text("사용중인 아이디입니다....");
+						$("#id_check").css("color", "red");
+						$("#reg_submit").attr("disabled", true);
+					} else {
+						
+						if(idJ.test(userid)){
+							// 0 : 아이디 길이 / 문자열 검사
+							$("#id_check").text("");
+							$("#reg_submit").attr("disabled", false);
+				
+						} else if(user_id == ""){
+							
+							$('#id_check').text('아이디를 입력해주세요 :)');
+							$('#id_check').css('color', 'red');
+							$("#reg_submit").attr("disabled", true);				
+							
+						} else {
+							
+							$('#id_check').text("아이디는 소문자와 숫자 4~12자리만 가능합니다 :) :)");
+							$('#id_check').css('color', 'red');
+							$("#reg_submit").attr("disabled", true);
+						}
+						
+					}
+				}, error : function() {
+						console.log("실패");
+				}
+			});
+		});
 </script>
  
   </body>

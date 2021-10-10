@@ -35,15 +35,16 @@
 					<div class="form-group">
 						<input type="password" class="form-control" name="password" value="admin">
 					</div>
-					<br>
+					
 					<div>
 						<input type="checkbox" name='remember-me'> Remember Me
 					</div>
+					<br>
 					<div class="form-checkkk">
 
 						<button type="submit"  class="btn btn-lg btn-block btn-success">로그인</button>
 						<button type="button" class="btn-j btn-lg btn-block btn-success"
-							onClick="location.href='./joinForm.me'">회원가입</button>
+							onClick="location.href='/member/joinForm'">회원가입</button>
 						<br>
 					</div>
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token }" />

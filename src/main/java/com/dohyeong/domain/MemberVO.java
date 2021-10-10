@@ -10,6 +10,7 @@ public class MemberVO {
 
 	private String userid;
 	private String userpw;
+	private String userpw2;
 	private String userName;
 	private boolean enabled;
 	
@@ -19,7 +20,7 @@ public class MemberVO {
 	
 	private String userNick;
 	private String userAddr;
-
-	
+	private String userpost;
+	private String u_agree;
 	
 }

@@ -29,5 +29,11 @@
 		WHERE mem.userid = #{userid}
 	</select>
 	
+	<select id="checkid">
+		SELECT 
+			count(*) FROM tbl_member  WHERE tbl_member.userid= #{userid}
+	</select>
+
+	
 
 </mapper>

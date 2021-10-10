@@ -32,7 +32,7 @@
                             </div>
                             
                             <div class="header__top__right__auth">
-                                <a href="#" style=" margin: 0px;"><i class="fa fa-user" ></i> 로그인</a>
+                                <a href="/member/customLogin" style=" margin: 0px;"><i class="fa fa-user" ></i> 로그인</a>
                                 <a href="/member/joinForm">회원가입</a>
                             </div>
                         </div>
@@ -51,17 +51,19 @@
                     <nav class="header__menu" style="padding-left: 30px;">
                         <ul style="width: 509px;">
                             <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
+                            
                             <li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
+                               <!--  <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
                                     <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                                     <li><a href="./checkout.html">Check Out</a></li>
                                     <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
+                                </ul> -->
                             </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <!-- <li><a href="./shop-grid.html">Shop</a></li> -->
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Git</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -91,18 +93,18 @@
          <div class="col-lg-3">
             <div class="hero__categories">
                <div class="hero__categories__all">
-                  <i class="fa fa-bars"></i> <span>All departments</span>
+                  <i class="fa fa-bars"></i> <span> 목  록 </span>
                </div>
                <ul>
-               	<li><a href="/board/boardlist">게시판</a></li>
+               	<li><a href="/board/boardlist">전체 글</a></li>
                	
                	
-                  <li><a href="./storeList.st">전체가게 보기</a></li>
-                  <li><a href="./reviewList.re">전체리뷰 보기</a></li>
-                  <li><a href="noticelist.no">공지사항</a></li>
-                  <li><a href="qnalist.qn">문의</a></li>
+                  <li><a href="#">인기 글</a></li>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <!-- <li><a href="qnalist.qn">문의</a></li>
                   <li><a href="eventList.ev">이벤트</a></li>
-                  <li><a href="./updateList.me">마이페이지</a></li>
+                  <li><a href="./updateList.me">마이페이지</a></li> -->
                   <!--<li><a href="#">Fastfood</a></li>
                             <li><a href="#">Fresh Onion</a></li>
                             <li><a href="#">Papayaya & Crisps</a></li>

@@ -23,8 +23,8 @@
          		
          	 	<div class="id_input_box">
 	         		<ts>아이디<span class="ico">*</span> </ts>
-	         	 	<td><input type="text"  class="add_input" id="userid" name="userid" placeholder="숫자와 영어를 포함 4~10자리내로 입력하세요." style="font-size:13px;" /></td> <!-- name="u_id"  -->
-	         	 	<input class="add_btn" type="button"  value="중복 확인" style="font-size:13px; onclick="id_overlap_check()"/>
+	         	 	<td><input type="text"  id="userid" name="userid" placeholder="숫자와 영어를 포함 4~10자리내로 입력하세요." style="font-size:13px;" /></td> <!-- name="u_id"  -->
+	         	 	<!-- <input class="add_btn" type="button"  value="중복 확인" style="font-size:13px; onclick="id_overlap_check()"/>  -->
          	 	</div>
          	 	<div class="check_font" id="id_check"></div>
          	 	
@@ -40,8 +40,8 @@
          	 	
          	 	<div class="id_input_box">
 	         	 	<ts>닉네임<span class="ico">*</span>   </ts>
-	         	 	<td><input class="add_input" type="text" name="userNick" placeholder="사용할 닉네임을 입력하세요." style="font-size:13px;"/></td>
-	         	 	<input class="add_btn" type="button"  value="중복 확인" style="font-size:13px; onclick="id_overlap_check()"/>
+	         	 	<td><input  type="text" name="userNick" placeholder="사용할 닉네임을 입력하세요." style="font-size:13px;"/></td>
+	         	 	<!-- <input class="add_btn" type="button"  value="중복 확인" style="font-size:13px; onclick="id_overlap_check()"/> -->
          	 	</div>
          	 	
          	 	<br>
@@ -227,46 +227,56 @@ function check_input() {
 }
 
 /* ------------------------------------------------------------- */
-/* -------------- 아이디 중복 체크하기 --------------------------------- */
+/*  ---------------- 아이디 중복 체크하기 --------------------------  */
 /* ------------------------------------------------------------- */
-/* $(function(){
+/*  $(function(){
  //아이디 중복체크
-     $('#u_id').blur(function(){
+     $('#userid').blur(function(){
          $.ajax({
          type:"post",
-         url:"checkid.bo",
-         data:{ "u_id":$('#u_id').val()},
+         //url:"checkid.bo",
+         url:"member/checkid",
+         data:{ "userid":$('#userid').val()},
          success:function(data){   //data : checkSignup에서 넘겨준 결과값
-                if($.trim(data)=="YES"){
-                   if($('#u_id').val()!==''){
+        	 	console.log("1 = 중복o / 0 = 중복x : "+ data);
+        	 	if($.trim(data)=="YES"){
+                   if($('#userid').val()!==''){
                       alert("사용가능한 아이디입니다.");
                    }
-                  }else{
-                   if($('#u_id').val()!==''){
+                }else{
+                   if($('#userid').val()!==''){
                       alert("이미 회원 가입된 아이디입니다.");
-                      $('#u_id').val('');
-                      $('#u_id').focus();
+                      $('#userid').val('');
+                      $('#userid').focus();
                    }
                 }
              },
         }) 
       })
- }); */
+ });
+  */
 	$("#userid").blur(function() {
 		
 		var userid = $('#userid').val();
 		$.ajax({
-			url : '${pageContext.request.contextPath}/member/idCheck?userId='+ userid,
-			type : 'get',
+			//url : '${pageContext.request.contextPath}/member/idCheck?userId='+ userid,
+			url: '${pageContext.request.contextPath}/member/idCheck',
+			data: {userid : 'userid'},
+			async: false,
+			type : 'post',
 			success : function(data) {
 				console.log("1 = 중복o / 0 = 중복x : "+ data);							
 				
-				if (data == 1) {
+				if (data == 'OK') {
 						// 1 : 아이디가 중복되는 문구
 						$("#id_check").text("사용중인 아이디입니다....");
 						$("#id_check").css("color", "red");
 						$("#reg_submit").attr("disabled", true);
-					} else {
+				} else {
+					alert("사용가능");
+				}
+				
+				/* 	} else {
 						
 						if(idJ.test(userid)){
 							// 0 : 아이디 길이 / 문자열 검사
@@ -286,13 +296,15 @@ function check_input() {
 							$("#reg_submit").attr("disabled", true);
 						}
 						
-					}
+					} */
+					
 				}, error : function() {
+						console.log("error data : "+ data);
 						console.log("실패");
 				}
 			});
-		});
+		}); 
 </script>
- 
+ <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   </body>
 </html>

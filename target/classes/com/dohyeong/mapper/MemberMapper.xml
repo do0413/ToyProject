@@ -29,9 +29,9 @@
 		WHERE mem.userid = #{userid}
 	</select>
 	
-	<select id="checkid" resultType="int">
+	<select id="checkid" parameterType="String" resultType="int">
 		SELECT 
-			count(*) FROM tbl_member  WHERE tbl_member.userid= #{userid}
+			count(*) FROM tbl_member  WHERE userid= #{userid}
 	</select>
 
 	

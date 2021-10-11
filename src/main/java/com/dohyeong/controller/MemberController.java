@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.dohyeong.domain.MemberVO;
 import com.dohyeong.service.MemberService;
 
 import lombok.extern.log4j.Log4j;
@@ -44,20 +45,64 @@ public class MemberController {
 		log.info("joinform");
 		return "member/joinForm";
 	}
+	//
+	//ajax 아이디중복확인
+	//
+	  private MemberService service;
+	  
+	 // id 중복 체크 컨트롤러
+	  
+	  @RequestMapping(value="/member/idCheck", method = RequestMethod.POST)
+	  @ResponseBody
+	  public String idCheck(@RequestParam String userid) throws Exception {
+			 System.out.println("--idcheck controller--" + userid );
+			 //return service.userIdCheck(userid);
+			 int res = service.checkid(userid);
+			 
+			 if (res > 0) {
+				 
+				 return "OK";
+			 }
+			 else {
+				 return "fail";
+			 }
+			 
+		 }
+	  
+	  
+	 //@GetMapping("/member/idCheck") 
+	/* @RequestMapping(value="/member/idCheck", method = RequestMethod.POST)
+	 @ResponseBody 
+	 public int idCheck(@RequestParam("userid") String userid) throws Exception {
+		 System.out.println("--idcheck controller--" + userid );
+		 //return service.userIdCheck(userid);
+		 int res = service.checkid(userid);
+		 
+		 if (res > 0) {
+		
+			 return res;
+		 }
+		 else {
+			 return res;
+		 }
+		 
+	 }*/
+		 //System.out.println("--idcheck controller--"); 
+	 
+		 //return reg_service.userIdCheck(user_id); 
+		 //}
+	 
 	
-	//@Autowired
-	private MemberService service;
-
-	// id 중복 체크 컨트롤러
-	//@GetMapping("/member/idCheck")
-	@RequestMapping("/member/idCheck")
-	//@ResponseBody
-	public int idCheck(@RequestParam("userId") String userid) {
-		System.out.println("--idcheck controller--" + userid );
-		//System.out.println("--idcheck controller--");
-		return service.userIdCheck(userid);
-		//return reg_service.userIdCheck(user_id);
-	}
-
+	/*
+	 * @Autowired private MemberService memberService;
+	 * 
+	 * @RequestMapping(value = "member/checkid", method = RequestMethod.POST)
+	 * 
+	 * @ResponseBody public String idcheck(@RequestParam("userid") String userid)
+	 * throws Exception { System.out.println("userid=" + userid); String str = "";
+	 * int idcheck = memberService.checkid(userid); if (idcheck == 1) { // 이미 존재하는
+	 * 계정 str = "NO"; } else { // 사용 가능한 계정 str = "YES"; } System.out.println(str);
+	 * return str; }
+	 */
 	
 }

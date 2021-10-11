@@ -11,10 +11,14 @@
 	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 	<bean id="customUserDetailsService" class="com.dohyeong.security.CustomUserDetailsService"></bean>
 	
-	
-	
+	<!-- role별로 접근할 수 있는 리소스를 정의하는 작업 -->
+	<security:http pattern="/member/idCheck" security="none"/>
+	<security:http pattern="/**/*.js" security="none"/>
+	<security:http pattern="/**/*.css" security="none"/>
+	<security:http pattern="/images/**" security="none"/>
 	<!-- <security:http auto-config="true" use-expressions="true"> -->
 	<security:http>
+	
 		<security:intercept-url pattern="/member/all" access="permitAll"/>
 		<!-- /sample/memeber라는 URI는 ROLE_MEMEBER라는 권한이 있는 사용자만 접근할 수 있다. -->
 		<security:intercept-url pattern="/member/member" access="hasRole('ROLE_MEMBER')"/>

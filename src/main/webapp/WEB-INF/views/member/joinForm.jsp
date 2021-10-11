@@ -111,7 +111,7 @@
   <!-- Js Plugins -->
  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
- 
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
  
  
  <script type="text/javascript">
@@ -305,6 +305,6 @@ function check_input() {
 			});
 		}); 
 </script>
- <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
   </body>
 </html>

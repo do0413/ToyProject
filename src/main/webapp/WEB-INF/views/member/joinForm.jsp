@@ -261,7 +261,8 @@ function check_input() {
 		$.ajax({
 			//url : '${pageContext.request.contextPath}/member/idCheck?userId='+ userid,
 			url: '${pageContext.request.contextPath}/member/idCheck',
-			data: {userid : 'userid'},
+			/* data: {userid : "userid"}, */
+			data: {"userid":userid },
 			async: false,
 			type : 'post',
 			success : function(data) {

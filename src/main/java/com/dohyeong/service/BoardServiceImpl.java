@@ -45,12 +45,6 @@ public class BoardServiceImpl implements BoardService {
 		return mapper.read(bno);
 	}
 
-	/*@Override
-	public String modify(BoardVO board) {
-		System.out.println("--service modify--");
-		return mapper.boardupdate(board);
-	}*/
-
 	@Override
 	public int boardupdate(BoardVO board) {
 		System.out.println("--service modify2--");

@@ -30,12 +30,13 @@
          	 	
          	 	<div class="id_input_box">
          	 		<ts>비밀번호<span class="ico">*</span>  </ts>
-         	 		<td><input type="password" name="userpw" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
+         	 		<td><input type="password" id="userpw" name="userpw" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
          	 	</div>
+         	 	<div class="check_font"  id="pw_check" style="color: red;  font-size: 10px;"></div>
          	 	
          	 	<div class="id_input_box">
 	         	 	<ts>비밀번호 확인<span class="ico">*</span>   </ts>
-	         	 	<td><input type="password" name="userpw2" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
+	         	 	<td><input type="password"  id="userpw2" name="userpw2" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
          	 	</div>
 
          	 	
@@ -163,15 +164,8 @@ function execDaumPostcode() {
 }
 
 /* ------------------------------------------------------------- */
-/*  ---------------- 아이디 중복 체크하기 --------------------------  */
-/* ------------------------------------------------------------- */
+/*  ---------------- 아이디 중복, 유효성 체크하기 -------------------  */
 
-/* function test(id){
-	  console.log("para: " + id )
-	  
-  }
-   */
-  
 	$("#userid").blur(function() {
 		
 		var userid = $('#userid').val();
@@ -217,7 +211,34 @@ function execDaumPostcode() {
 					console.log("실패");
 			}
 		});
-	}); 
+	});
+	/* ------------------------------------------------------------- */
+	/*  ---------------- 비번 일치, 유효성 체크하기 -------------------  */
+	$("#userpw2").blur(function() {
+		
+		var userpw = $('#userpw').val();
+		var userpw2 = $('#userpw2').val();
+		
+		console.log("비번확인"+ userpw);
+		console.log("비번확인"+ userpw2);							
+				
+		if(!pwJ.test($("#userpw").val())){
+			alert("형식에 맞게 입력해주세요"); 
+			$("#userpw").val(""); 
+			$("#userpw").focus(); 
+			return false; 
+		}			
+		
+		if($("#userpw").val() != $("#userpw2").val()){
+			alert("비밀번호가 달라요! 확인해 주세요."); 
+			$("#userpw").val(""); 
+			$("#userpw2").val(""); 
+			$("#userpw").focus(); return false; 
+		}
+
+		
+	});
+	
 </script>
 
   </body>

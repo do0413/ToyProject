@@ -48,12 +48,10 @@ public class MemberController {
 		log.info("joinform");
 		return "member/joinForm";
 	}
-	//
+	
 	//ajax 아이디중복확인
 	//
 	  private MemberService service;
-	  
-	 // id 중복 체크 컨트롤러
 	  
 	  @RequestMapping(value="/member/idCheck", method = RequestMethod.POST)
 	  @ResponseBody
@@ -72,40 +70,23 @@ public class MemberController {
 			 
 		 }
 	  
+	  //회원가입
+	  @PostMapping("/member/joinProcess")
+	  public String insertMember(MemberVO memberVO) {
+		  System.out.println("--insertmember controller--" + memberVO);
+		  int result = service.insertMember(memberVO);
+		  
+		  if(result==1) {
+			  System.out.println("--insertmember controller-if--" + result);
+			  return "/member/customLogin";
+		  }
+		  else {
+			  System.out.println("--insertmember controller-else--" + result);
+			  return "/member/joinForm";
+		  }
+		  return null;
+		  
+	  }
 	  
-	 //@GetMapping("/member/idCheck") 
-	/* @RequestMapping(value="/member/idCheck", method = RequestMethod.POST)
-	 @ResponseBody 
-	 public int idCheck(@RequestParam("userid") String userid) throws Exception {
-		 System.out.println("--idcheck controller--" + userid );
-		 //return service.userIdCheck(userid);
-		 int res = service.checkid(userid);
-		 
-		 if (res > 0) {
-		
-			 return res;
-		 }
-		 else {
-			 return res;
-		 }
-		 
-	 }*/
-		 //System.out.println("--idcheck controller--"); 
-	 
-		 //return reg_service.userIdCheck(user_id); 
-		 //}
-	 
-	
-	/*
-	 * @Autowired private MemberService memberService;
-	 * 
-	 * @RequestMapping(value = "member/checkid", method = RequestMethod.POST)
-	 * 
-	 * @ResponseBody public String idcheck(@RequestParam("userid") String userid)
-	 * throws Exception { System.out.println("userid=" + userid); String str = "";
-	 * int idcheck = memberService.checkid(userid); if (idcheck == 1) { // 이미 존재하는
-	 * 계정 str = "NO"; } else { // 사용 가능한 계정 str = "YES"; } System.out.println(str);
-	 * return str; }
-	 */
 	
 }

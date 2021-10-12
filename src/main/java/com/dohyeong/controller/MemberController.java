@@ -49,6 +49,13 @@ public class MemberController {
 		return "member/joinForm";
 	}
 	
+	@RequestMapping("/member/loginForm")
+	public String loginForm() throws Exception {
+		
+		log.info("loginform");
+		return "member/customLogin";
+	}
+	
 	//ajax 아이디중복확인
 	//
 	  private MemberService service;
@@ -78,13 +85,12 @@ public class MemberController {
 		  
 		  if(result==1) {
 			  System.out.println("--insertmember controller-if--" + result);
-			  return "/member/customLogin";
+			  return "/member/loginForm";
 		  }
 		  else {
 			  System.out.println("--insertmember controller-else--" + result);
 			  return "/member/joinForm";
-		  }
-		  return null;
+		  }	  
 		  
 	  }
 	  

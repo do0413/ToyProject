@@ -35,5 +35,14 @@
 	</select>
 
 	
+	<insert id="insertMember">
+		INSERT ALL
+			into tbl_membert (userid, userpw, username)
+			values (#{userid}, #{userpw}, #{username})
+			
+			into tbl_membert_auth (userid, auth)
+			values (#{userid}, #{auth})
+	
+	</insert>
 
 </mapper>

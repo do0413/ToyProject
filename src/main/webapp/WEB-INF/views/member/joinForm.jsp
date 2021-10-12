@@ -43,7 +43,7 @@
          	 	<br>
          	 	<div class="id_input_box">
 	         	 	<ts>이름<span class="ico">*</span>   </ts>
-	         	 	<td><input type="text" name="userName" placeholder="이름을 입력하세요." style="font-size:13px;"/></td>
+	         	 	<td><input type="text" name="username" placeholder="이름을 입력하세요." style="font-size:13px;"/></td>
          	 	</div>
          	 	
          	 	<!-- <div class="id_input_box">
@@ -67,6 +67,9 @@
 	         	 	</div>
          	 	</div>
          	 	
+         	 	<div>
+         	 		<input type="hidden" value="ROLE_USER">
+         	 	</div>
          	 	 <div class="id_input_box">
 	         	 	<ts>개인정보 약관<span class="ico">*</span></ts>
 	         	 	<div class="input_box_box">

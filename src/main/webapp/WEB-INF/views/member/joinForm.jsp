@@ -26,7 +26,7 @@
 	         	 	<td><input type="text"  id="userid" name="userid" placeholder="숫자와 영어를 포함 4~10자리내로 입력하세요." style="font-size:13px;" /></td> <!-- name="u_id"  -->
 	         	 	<!-- <input class="add_btn" type="button"  value="중복 확인" style="font-size:13px; onclick="id_overlap_check()"/>  -->
          	 	</div>
-         	 	<div class="check_font" id="id_check"></div>
+         	 	<div class="check_font"  id="id_check" style="color: red;  font-size: 10px;"></div>
          	 	
          	 	<div class="id_input_box">
          	 		<ts>비밀번호<span class="ico">*</span>  </ts>
@@ -37,12 +37,7 @@
 	         	 	<ts>비밀번호 확인<span class="ico">*</span>   </ts>
 	         	 	<td><input type="password" name="userpw2" placeholder="숫자와 영어를 포함 6~12자리내로 입력하세요." style="font-size:13px;"/></td>
          	 	</div>
-         	 	
-         	 	<div class="id_input_box">
-	         	 	<ts>닉네임<span class="ico">*</span>   </ts>
-	         	 	<td><input  type="text" name="userNick" placeholder="사용할 닉네임을 입력하세요." style="font-size:13px;"/></td>
-	         	 	<!-- <input class="add_btn" type="button"  value="중복 확인" style="font-size:13px; onclick="id_overlap_check()"/> -->
-         	 	</div>
+
          	 	
          	 	<br>
          	 	<div class="id_input_box">
@@ -113,9 +108,21 @@
  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
  
- 
+
  <script type="text/javascript">
- var birthExp = /^\d{8}$/;
+	//모든 공백 체크 정규식
+	var empJ = /\s/g;
+	//아이디 정규식
+	var idJ = /^[a-z0-9]{4,10}$/;
+	// 비밀번호 정규식
+	var pwJ = /^[A-Za-z0-9]{6,12}$/; 
+	// 이름 정규식
+	var nameJ = /^[가-힣]{2,6}$/;
+	// 이메일 검사 정규식
+	var mailJ = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+	// 휴대폰 번호 정규식
+	var phoneJ = /^01([0|1|6|7|8|9]?)?([0-9]{3,4})?([0-9]{4})$/;
+ //var birthExp = /^\d{8}$/;
  /* ------------------------------------------------------------- */
  /* https://postcode.map.daum.net/guide#usage (사용자가 선택한 값 이용하기) */
  /* ------------------------------------------------------------- */
@@ -155,106 +162,16 @@ function execDaumPostcode() {
    }).open();
 }
 
-
-function check_input() {
- var str,i,ch,chk,chk_list="";
- 
- if(document.joinform.u_id.value=="") {
-    alert("아이디를 입력하세요!!");
-    document.joinform.u_id.focus();
-    return false;
- } else {
-    str=document.joinform.u_id.value;
-    if(str.length<4 || str.length>10){
-       alert("아이디 길이를 확인해주세요 (4~10자리)!!!");
-       document.joinform.u_id.focus();
-       return false;
-    } else {
-       for(i=0;i<str.length;i++) {
-          ch=str.substring(i,i+1);
-          if(!((ch>="0" && ch<="9")||(ch>="a" && ch<="z") ||(ch>="A" && ch<="Z"))){
-             alert("특수문자가 포함, 다시입력!!!");
-             document.joinform.u_id.focus();
-             return false;
-          }
-       }
-    }
- }
- 
- chk_list="u_id="+str+"\n";
- //아이디 입력시 체크하는 부분
- //비밀번호 체크
- if(document.joinform.u_pw.value=="") {
-    alert("비밀번호를 입력하세요!!!");
-    document.joinform.u_pw.focus();
-    return false;
- } else {
-    str=document.joinform.u_pw.value;
-    if(str.length<6 || str.length>12) {
-       alert("비밀번호 길이를 확인하세요(6~12자리)!!!");
-       document.joinform.u_pw.focus();
-       return false;
-    } else{
-       for(i=0;i<str.length;i++) {
-          ch=str.substring(i,i+1);
-          if(!((ch>="0" && ch<="9")||(ch>="a" && ch<="z") ||(ch>="A" && ch<="z"))) {
-          alert("특수문자가 포함되어있습니다, 다시입력해주세요!!");
-          document.joinform.u_pw.focus();
-          return false;
-          }
-       }
-    }
- }
- 
- if(document.joinform.u_pw.value != document.joinform.u_pw2.value) {
-    alert("비밀번호가 일치하지 않습니다 다시 확인해주세요!!!");
-    document.joinform.u_pw2.focus();
-    return false;
- }
- 
- chk_list +="u_pw="+str+"\n";
- 
- var u_birth = document.joinform.u_birth;
- 
- if( !birthExp.test( u_birth.value ) ) {
-    alert("생년월일은 숫자만 8자리 입력가능합니다");
-    u_birth.value = "";
-    u_birth.focus();
-    return false;
- }
- 
- joinform.submit();
-}
-
 /* ------------------------------------------------------------- */
 /*  ---------------- 아이디 중복 체크하기 --------------------------  */
 /* ------------------------------------------------------------- */
-/*  $(function(){
- //아이디 중복체크
-     $('#userid').blur(function(){
-         $.ajax({
-         type:"post",
-         //url:"checkid.bo",
-         url:"member/checkid",
-         data:{ "userid":$('#userid').val()},
-         success:function(data){   //data : checkSignup에서 넘겨준 결과값
-        	 	console.log("1 = 중복o / 0 = 중복x : "+ data);
-        	 	if($.trim(data)=="YES"){
-                   if($('#userid').val()!==''){
-                      alert("사용가능한 아이디입니다.");
-                   }
-                }else{
-                   if($('#userid').val()!==''){
-                      alert("이미 회원 가입된 아이디입니다.");
-                      $('#userid').val('');
-                      $('#userid').focus();
-                   }
-                }
-             },
-        }) 
-      })
- });
-  */
+
+/* function test(id){
+	  console.log("para: " + id )
+	  
+  }
+   */
+  
 	$("#userid").blur(function() {
 		
 		var userid = $('#userid').val();
@@ -262,49 +179,45 @@ function check_input() {
 			//url : '${pageContext.request.contextPath}/member/idCheck?userId='+ userid,
 			url: '${pageContext.request.contextPath}/member/idCheck',
 			/* data: {userid : "userid"}, */
-			data: {"userid":userid },
+			data: {"userid": userid },
 			async: false,
 			type : 'post',
 			success : function(data) {
 				console.log("1 = 중복o / 0 = 중복x : "+ data);							
+				var id = $("#userid").val();
 				
 				if (data == 'OK') {
 						// 1 : 아이디가 중복되는 문구
-						$("#id_check").text("사용중인 아이디입니다....");
+						$("#id_check").text("이미 사용중인 아이디에요....");
 						$("#id_check").css("color", "red");
 						$("#reg_submit").attr("disabled", true);
-				} else {
-					alert("사용가능");
 				}
-				
-				/* 	} else {
-						
-						if(idJ.test(userid)){
+				//일단 중복은 아님. 유효성검사하기.
+				else {
+					debugger;
+						if(id == "") {
 							// 0 : 아이디 길이 / 문자열 검사
-							$("#id_check").text("");
-							$("#reg_submit").attr("disabled", false);
-				
-						} else if(user_id == ""){
-							
 							$('#id_check').text('아이디를 입력해주세요 :)');
 							$('#id_check').css('color', 'red');
-							$("#reg_submit").attr("disabled", true);				
-							
-						} else {
-							
+							$("#reg_submit").attr("disabled", true);
+				
+						} else if((id.length > 12) || (id.length < 4) || (!idJ.test(id)) ){
 							$('#id_check').text("아이디는 소문자와 숫자 4~12자리만 가능합니다 :) :)");
 							$('#id_check').css('color', 'red');
 							$("#reg_submit").attr("disabled", true);
+						} else {
+							$("#id_check").text("");
+							$("#reg_submit").attr("disabled", false);
+							
 						}
-						
-					} */
+				} 
 					
-				}, error : function() {
-						console.log("error data : "+ data);
-						console.log("실패");
-				}
-			});
-		}); 
+			}, error : function() {
+					console.log("error data : "+ data);
+					console.log("실패");
+			}
+		});
+	}); 
 </script>
 
   </body>

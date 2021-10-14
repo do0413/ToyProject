@@ -27,10 +27,16 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.checkid(userid);
 	}
 
+	/*
+	 * @Override public int insertMember(MemberVO memberVO) {
+	 * System.out.println("--insertMember servicepl--" + memberVO); return
+	 * mapper.insertMember(memberVO); }
+	 */
+
 	@Override
-	public int insertMember(MemberVO memberVO) {
-		System.out.println("--insertMember servicepl--" + memberVO);
-		return mapper.insertMember(memberVO);
+	public int insertMember(String parm) {
+		System.out.println("--insertMember servicepl--" + parm); 
+		return mapper.insertMember(parm);
 	}
 	
 

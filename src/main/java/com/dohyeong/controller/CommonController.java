@@ -30,7 +30,7 @@ public class CommonController {
 		log.info("logout : " + logout);
 		
 		if (error != null) {
-			model.addAttribute("error", "Login Error Check Your Account");
+			model.addAttribute("error", "아이디나 비밀번호이 일치하지 않아요.");
 		}
 		
 		if (logout != null) {

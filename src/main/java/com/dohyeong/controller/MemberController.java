@@ -1,6 +1,11 @@
 package com.dohyeong.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.sql.DataSource;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,9 +20,10 @@ import com.dohyeong.service.MemberService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
+
 @Log4j
 /* @RequestMapping("/member/*") */
-@Controller
+@Controller 
 @AllArgsConstructor
 public class MemberController {
 
@@ -85,20 +91,41 @@ public class MemberController {
 	  
 	  //회원가입
 	  @PostMapping("/member/joinProcess")
+	  //public String insertMember(MemberVO memberVO) {
 	  public String insertMember(MemberVO memberVO) {
-
 		  System.out.println("--insertmember controller--" + memberVO);
-		  int result = service.insertMember(memberVO);
-		  
-		  if(result == 2) {
-			  System.out.println("--insertmember controller-if--" + result);
-			  return "member/customLogin";
+		 
+		  BCryptPasswordEncoder pwencoder = new BCryptPasswordEncoder();
+		  //DataSource ds;
+		  //Connection con = null;
+		  PreparedStatement pastmt = null;
+		  //String parm=null;
+		  try {
+			  String parm =pwencoder.encode(memberVO.getUserpw());
+			  System.out.println("---parm---"+parm);
+			  //pwencoder.
+			  int result = service.insertMember(parm);
 			  
+
+			  if(result == 2) {
+				  System.out.println("--insertmember controller-if--" + result);
+				  return "member/customLogin";
+				  
+			  }
+			  else {
+				  System.out.println("--insertmember controller-else--" + result);
+				  return "member/joinForm";
+			  }	  
+			  
+			  
+		  }catch(Exception e) {
+			  e.printStackTrace();
 		  }
-		  else {
-			  System.out.println("--insertmember controller-else--" + result);
-			  return "member/joinForm";
-		  }	  
+		return null;
+		  
+		  
+		  //
+		  
 		  
 	  }
 	  

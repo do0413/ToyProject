@@ -47,7 +47,7 @@
 	
 	
 	<security:authentication-manager>
-		<!-- <security:authentication-provider> -->
+		 <!-- <security:authentication-provider>  -->
 		<security:authentication-provider user-service-ref="customUserDetailsService">
 		
 			<!-- <security:user-service>
@@ -60,7 +60,7 @@
 			<security:password-encoder ref="bcryptPasswordEncoder"/> -->
 			
 			
-			<security:password-encoder ref="bcryptPasswordEncoder"/>
+			<security:password-encoder ref="bcryptPasswordEncoder"/> 
 			
 			<!-- 쿼리를 이용하는 인증 -->
 			<!-- <security:jdbc-user-service data-source-ref="dataSource" 

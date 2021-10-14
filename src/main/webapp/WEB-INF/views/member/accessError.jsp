@@ -10,7 +10,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>권한이 없는 페이지 입니다.</h1>
+<h1>로그인에 실패했거나</h1>
+<h1>권한이 없어서 페이지를 로드하지 못했어요.</h1>
 
 <h2><c:out value="${SPRING_SECURITY_403_EXCEPTION.getMessage()}"/></h2>
 <h2><c:out value="${msg }"/></h2>

@@ -42,6 +42,12 @@ public class MemberController {
 		log.info("admin only");
 	}
 	
+	/*
+	 * @GetMapping("/member/login") public void login() {
+	 * 
+	 * log.info("--login--"); }
+	 */
+	
 	@RequestMapping("/member/joinForm")
 	public String joinForm() throws Exception {
 		
@@ -80,16 +86,18 @@ public class MemberController {
 	  //회원가입
 	  @PostMapping("/member/joinProcess")
 	  public String insertMember(MemberVO memberVO) {
+
 		  System.out.println("--insertmember controller--" + memberVO);
 		  int result = service.insertMember(memberVO);
 		  
-		  if(result==1) {
+		  if(result == 2) {
 			  System.out.println("--insertmember controller-if--" + result);
-			  return "/member/loginForm";
+			  return "member/customLogin";
+			  
 		  }
 		  else {
 			  System.out.println("--insertmember controller-else--" + result);
-			  return "/member/joinForm";
+			  return "member/joinForm";
 		  }	  
 		  
 	  }

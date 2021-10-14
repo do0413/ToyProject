@@ -37,11 +37,13 @@
 	
 	<insert id="insertMember">
 		INSERT ALL
-			into tbl_membert (userid, userpw, username)
+			into tbl_member (userid, userpw, username)
 			values (#{userid}, #{userpw}, #{username})
 			
-			into tbl_membert_auth (userid, auth)
+			into tbl_member_auth (userid, auth)
 			values (#{userid}, #{auth})
+			
+			SELECT * FROM dual
 	
 	</insert>
 

@@ -19,7 +19,7 @@
         	<div class="join">
  				<h1>JOIN</h1>
             <!-- join form -->
-         	<form name="joinform" action="member/joinProcess" method="post">
+         	<form name="joinform" action="/member/joinProcess" method="post">
          		
          	 	<div class="id_input_box">
 	         		<ts>아이디<span class="ico">*</span> </ts>
@@ -43,7 +43,7 @@
          	 	<br>
          	 	<div class="id_input_box">
 	         	 	<ts>이름<span class="ico">*</span>   </ts>
-	         	 	<td><input type="text" name="username" placeholder="이름을 입력하세요." style="font-size:13px;"/></td>
+	         	 	<td><input type="text" id="username" name="username" placeholder="이름을 입력하세요." style="font-size:13px;"/></td>
          	 	</div>
          	 	
          	 	<!-- <div class="id_input_box">
@@ -68,7 +68,7 @@
          	 	</div>
          	 	
          	 	<div>
-         	 		<input type="hidden" value="ROLE_USER">
+         	 		<input name="auth" type="hidden" value="ROLE_MEMBER">
          	 	</div>
          	 	 <div class="id_input_box">
 	         	 	<ts>개인정보 약관<span class="ico">*</span></ts>
@@ -131,7 +131,9 @@
  /* https://postcode.map.daum.net/guide#usage (사용자가 선택한 값 이용하기) */
  /* ------------------------------------------------------------- */
 function execDaumPostcode() {
+	 debugger;
    new daum.Postcode({
+	  
        oncomplete: function(data) {
            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
            // 각 주소의 노출 규칙에 따라 주소를 조합한다.
@@ -158,7 +160,7 @@ function execDaumPostcode() {
                Addr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
            }
            // 우편번호와 주소 정보를 해당 필드에 넣는다.
-           document.getElementById('u_post').value = data.zonecode; //5자리 새우편번호 사용
+           document.getElementById('userpost').value = data.zonecode; //5자리 새우편번호 사용
            document.getElementById('u_addr').value = Addr;
            // 커서를 상세주소 필드로 이동한다.
            document.getElementById('u_addr').focus();
@@ -191,7 +193,7 @@ function execDaumPostcode() {
 				}
 				//일단 중복은 아님. 유효성검사하기.
 				else {
-					debugger;
+					
 						if(id == "") {
 							// 0 : 아이디 길이 / 문자열 검사
 							$('#id_check').text('아이디를 입력해주세요 :)');

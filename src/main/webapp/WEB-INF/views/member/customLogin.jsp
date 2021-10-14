@@ -28,12 +28,13 @@
 
 				<!-- Login form : post방식으로 전송해야 합니다. -->
 				<!-- /login이라는 속성값으로 login-page을 이용할수 있습니다. -->
-				<form action="/login" method="post">
+				<!-- <form action="/member/customLogin" method="post"> -->
+				<form method='POST' action="/login">
 					<div class="form-group"  >
-						<input type="text" class="form-control" name="username" value="admin">
+						<input type="text" class="form-control" name="username" >
 					</div>
 					<div class="form-group">
-						<input type="password" class="form-control" name="password" value="admin">
+						<input type="password" class="form-control" name="password" >
 					</div>
 					
 					<div>

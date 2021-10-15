@@ -8,8 +8,9 @@ public interface MemberService {
 
 	public int checkid(String userid);
 
-	//public int insertMember(MemberVO memberVO);
+	public int insertMember(MemberVO memberVO);
 
-	public int insertMember(String parm);
+	//public int insertMember(String parm);
+
 	
 }

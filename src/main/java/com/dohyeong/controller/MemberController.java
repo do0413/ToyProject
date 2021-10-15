@@ -89,7 +89,7 @@ public class MemberController {
 			 
 		 }
 	  
-	  //회원가입
+	 /* //회원가입
 	  @PostMapping("/member/joinProcess")
 	  //public String insertMember(MemberVO memberVO) {
 	  public String insertMember(MemberVO memberVO) {
@@ -98,8 +98,9 @@ public class MemberController {
 		  BCryptPasswordEncoder pwencoder = new BCryptPasswordEncoder();
 		  //DataSource ds;
 		  //Connection con = null;
-		  PreparedStatement pastmt = null;
+		  //PreparedStatement pastmt = null;
 		  //String parm=null;
+		  
 		  try {
 			  String parm =pwencoder.encode(memberVO.getUserpw());
 			  System.out.println("---parm---"+parm);
@@ -121,11 +122,28 @@ public class MemberController {
 		  }catch(Exception e) {
 			  e.printStackTrace();
 		  }
-		return null;
+		return null;  
+	  }*/
+	  
+	  
+	//회원가입
+	  @PostMapping("/member/joinProcess")
+	  public String insertMember(MemberVO memberVO) {
+		  System.out.println("--insertmember controller--" + memberVO);
+
+		  int result = service.insertMember(memberVO);
 		  
+			  if(result == 2) {
+				  System.out.println("--insertmember controller-if--" + result);
+				  return "member/customLogin";
+				  
+			  }
+			  else {
+				  System.out.println("--insertmember controller-else--" + result);
+				  return "member/joinForm";
+			  }
 		  
-		  //
-		  
+
 		  
 	  }
 	  

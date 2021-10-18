@@ -1,7 +1,25 @@
+<%@page import="com.dohyeong.controller.CommonController"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@include file="./includes/header.jsp"%>
-<%@ page import="com.dohyeong.domain.*"%> 
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+
+<%@ page import="com.dohyeong.domain.*"%>
+<%@ page import="com.dohyeong.controller.CommonController.*" %>
+<%@ page import="com.dohyeong.security.CustomLoginSuccessHandler" %>
+
+<%@ page import="org.springframework.ui.Model"%>
+<%@ page import="com.dohyeong.domain.*"%>
+<%@ page import="com.dohyeong.domain.*"%>
+
+<%
+	AuthVO aut = (AuthVO) session.getAttribute("aut");
+	String auth="";
+	if(aut != null) {
+		auth = aut.getAuth();
+	}
+
+%>
 <!-- 템플릿 https://colorlib.com/wp/template/ogani/ --> 
 
 <link rel="stylesheet"
@@ -30,11 +48,33 @@
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
+                          <%--   <sec:authorize access="isAnonymous()">
+								<a href="${CONTEXT }/j_spring_security_check">로그인</a>
+							</sec:authorize> --%>
+						
+							<%-- <sec:authorize access="isAuthenticated()">
+								<a href="${CONTEXT }/j_spring_security_logout">로그아웃</a>
+							</sec:authorize> --%>
+
+                                <div class="header__top__right__auth">
+                                <%
+                                	if(auth !=null && auth!="") {
+                                		
+                                %>
+                                	<a href="/member/customLogout" style=" margin: 0px;"><i class="fa fa-user" ></i> 로그아웃  </a>
+    	                            <a href="/member/customLogin" style=" margin: 0px;"><i class="fa fa-user" ></i> 로그인</a>
+    	                            <a href="/member/joinForm">회원가입</a>
+    	                             </div>
+                                <%
+                                	} else {
+                                %>
+                          	        <a href="/member/customLogin" style=" margin: 0px;"><i class="fa fa-user" ></i> 로그인</a>
+	                                <a href="/member/joinForm">회원가입</a>
+	                            </div>
+	                            <%
+	                            	} 
+	                            %>
                             
-                            <div class="header__top__right__auth">
-                                <a href="/member/customLogin" style=" margin: 0px;"><i class="fa fa-user" ></i> 로그인</a>
-                                <a href="/member/joinForm">회원가입</a>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -23,6 +23,7 @@ public class CommonController {
 		model.addAttribute("msg", "Access Denied");
 	}
 	
+	
 	@GetMapping("/member/customLogin")
 	public void loginInput(String error, String logout, Model model) {
 		//get방식 사용
@@ -34,15 +35,24 @@ public class CommonController {
 		}
 		
 		if (logout != null) {
+			
 			model.addAttribute("logout", "Logout!!!!!");
 		}
-		
-		
 	}
 	
+	
+	/*
+	 * @GetMapping("/member/customLogout") public void logoutGET() {
+	 * log.info("custom logout"); }
+	 */
+	
 	@GetMapping("/member/customLogout")
-	public void logoutGET() {
+	public void logoutGET(String error, String logout) {
+		log.info("-logout--error-- : " + error);
+		log.info("-logout--logout- : " + logout);
+		
 		log.info("custom logout");
 	}
+	
 
 }

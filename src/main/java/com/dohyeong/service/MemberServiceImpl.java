@@ -29,7 +29,7 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	
-	 @SuppressWarnings("null")
+	//@SuppressWarnings("null")
 	@Override 
 	 public int insertMember(MemberVO memberVO) {
 		 System.out.println("--insertMember servicepl--" + memberVO); 

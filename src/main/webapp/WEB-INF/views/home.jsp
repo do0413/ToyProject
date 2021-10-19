@@ -26,7 +26,7 @@
 <%
 	/* List<String> roleNames = new ArrayList<>(); */
 	String roleNames = (String) request.getAttribute("roleNames");
-	
+	System.out.println("------roleNames222------" +roleNames);
 %>
 <%--  <%
 	MemberVO aut = (MemberVO) session.getAttribute("aut");
@@ -84,7 +84,7 @@
 						</div>
 						<div class="header__top__right__auth">
 						<%
-							System.out.println("------roleNames------" +roleNames);
+						System.out.println("------roleNames------" +roleNames);
 						System.out.println("------roleNames------" +roleNames);
 						System.out.println("------roleNames------" +roleNames);
 							if(roleNames != null) {			

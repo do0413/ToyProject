@@ -47,10 +47,13 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler{
 			System.out.println("------------");
 			System.out.println("------roleNames------" + roleNames);
 			System.out.println("------------");
+			model.addAttribute("roleNames",roleNames);
 			response.sendRedirect("/");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 			return;
 		}
 		
+		System.out.println("----ddddd-------");
+		model.addAttribute("roleNames",roleNames);
 		response.sendRedirect("/");
 	}
 	

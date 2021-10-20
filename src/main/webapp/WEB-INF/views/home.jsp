@@ -139,7 +139,7 @@
 
 			<div class="col-lg-9">
 				<div class="hero__item set-bg"
-					data-setbg="./resources/img/hero/top-banner-test3.jpg">
+					data-setbg="./resources/img/banner/banner_main02.png">
 					<div class="hero__text"></div>
 				</div>
 			</div>
@@ -201,6 +201,18 @@
 <div class="banner">
 	<div class="container">
 		<div class="row">
+			<!-- <div class="col-lg-6 col-md-6 col-sm-6"> -->
+				<div class="banner__pic">
+					<a href="./eventList.ev"><img src="./resources/img/banner/banner_main01.png" alt="" style="height: 262.99px;"></a>
+				</div>
+			<!--  </div> -->
+		</div>
+	</div>
+</div>
+<!-- 
+<div class="banner">
+	<div class="container">
+		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
 				<div class="banner__pic">
 					<a href="./eventList.ev"><img
@@ -217,6 +229,7 @@
 		</div>
 	</div>
 </div>
+ -->
 <!-- Banner End -->
 
 <!-- Channel Plugin Scripts -->

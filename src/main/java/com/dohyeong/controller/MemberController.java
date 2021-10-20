@@ -26,8 +26,6 @@ import lombok.extern.log4j.Log4j;
 @Controller 
 @AllArgsConstructor
 public class MemberController {
-
-	
 	
 	//all:누구나 접근가능  	member: 로그인해야 접근가능 	admin:로그인+관리자권한
 	@GetMapping("/member/all")

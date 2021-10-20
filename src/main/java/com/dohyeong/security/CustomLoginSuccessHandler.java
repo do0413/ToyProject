@@ -33,27 +33,15 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler{
 		
 		/*ROLE_ADMIN권한을 가진 사용자는 로그인후 바로 /member/admin로 이동하게 됩니다.*/
 		if(roleNames.contains("ROLE_ADMIN")) {
-			//auth=(Authentication)auth.getAuthorities();
-			System.out.println("------------");
-			System.out.println("------roleNames------" + roleNames);
-			System.out.println("------------");
-			model.addAttribute("roleNames",roleNames);
 			response.sendRedirect("/");
 			return;
 		}
 		
-		if (roleNames.contains("ROLE_MEMBER")) {
-			//auth=(Authentication)auth.getAuthorities();
-			System.out.println("------------");
-			System.out.println("------roleNames------" + roleNames);
-			System.out.println("------------");
-			model.addAttribute("roleNames",roleNames);
+		if (roleNames.contains("ROLE_MEMBER")) {		
 			response.sendRedirect("/");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 			return;
 		}
 		
-		System.out.println("----ddddd-------");
-		model.addAttribute("roleNames",roleNames);
 		response.sendRedirect("/");
 	}
 	

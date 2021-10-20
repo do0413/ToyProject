@@ -2,58 +2,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="./includes/header.jsp"%>
-<%@ taglib uri="http://www.springframework.org/security/tags"
-	prefix="sec"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
+<%@ taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@ page import="com.dohyeong.domain.*"%>
 <%@ page import="com.dohyeong.controller.CommonController.*"%>
 <%@ page import="com.dohyeong.security.CustomLoginSuccessHandler"%>
 <%@ page import="org.springframework.security.core.Authentication"%>
-<%@ page
-	import="org.springframework.security.web.authentication.AuthenticationSuccessHandler"%>
-<%@ page import="java.io.IOException"%>
-<%@ page import="java.util.ArrayList"%>
-<%@ page import="java.util.List"%>
-<%@ page import="javax.servlet.ServletException"%>
-<%@ page import="javax.servlet.http.HttpServletRequest"%>
-<%@ page import="javax.servlet.http.HttpServletResponse"%>
-<%@ page import="java.util.Stack"%>
+<%@ page import="org.springframework.security.web.authentication.AuthenticationSuccessHandler"%>
 
-<%@ page import="org.springframework.ui.Model"%>
-<%@ page import="com.dohyeong.domain.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%
 	/* List<String> roleNames = new ArrayList<>(); */
 	String roleNames = (String) request.getAttribute("roleNames");
 	System.out.println("------roleNames222------" +roleNames);
 %>
-<%--  <%
-	MemberVO aut = (MemberVO) session.getAttribute("aut");
- 	List<AuthVO> auth= null;
-	if(aut != null ) {
-		auth = aut.getAuthList();
-	} else {
-		auth = null;
-	}
-%>  --%>
-<%--  <%
-	AuthVO aut = (AuthVO) session.getAttribute("auth");
- 	String auth= null;
-	if(aut != null ) {
-		auth = aut.getAuth();
-	} else {
-		auth = null;
-	}
-%>  --%>
 
-<!--  authList=[AuthVO(userid=2222, auth=ROLE_MEMBER)], auth=null,  -->
-<%-- <%
-	MemberVO mvo = (MemberVO) session.getAttribute("memberVO");
-	List<AuthVO> auth= new ArrayList(); 
-	String ele = auth.get(0).getAuth().toString();
-	List<MemberVO> authm = new ArrayList();
-%> --%>
 <!-- 템플릿 https://colorlib.com/wp/template/ogani/ -->
 
 <link rel="stylesheet"
@@ -82,47 +46,19 @@
 								class="fa fa-linkedin"></i></a> <a href="#"><i
 								class="fa fa-pinterest-p"></i></a>
 						</div>
-						<div class="header__top__right__auth">
-						<%
-						System.out.println("------roleNames------" +roleNames);
-						System.out.println("------roleNames------" +roleNames);
-						System.out.println("------roleNames------" +roleNames);
-							if(roleNames != null) {			
-						%>
-							<a href="/member/customLogout" style="margin: 0px;"><i class="fa fa-user"></i> 로그아웃 </a>
-						</div>
-						<%
-							} else {
-
-						%>
-							<a href="/member/customLogin" style="margin: 0px;"><i class="fa fa-user"></i> 로그인</a> 
-							<a href="/member/joinForm">회원가입</a>
-						</div>
-						<%
-							}
-						%>
-						<%--   <sec:authorize access="isAnonymous()">
-								<a href="${CONTEXT }/j_spring_security_check">로그인</a>
-							</sec:authorize> --%>
-
-						<%-- <sec:authorize access="isAuthenticated()">
-								<a href="${CONTEXT }/j_spring_security_logout">로그아웃</a>
-							</sec:authorize> --%>
-
-						<%-- <div class="header__top__right__auth">
-						<c:set var="auth" value='${auth.getAuthorities() }'/>
-						<c:choose>
- 						<c:when test="${auth eq null }">
-							<a href="/member/customLogin" style="margin: 0px;"><i class="fa fa-user"></i> 로그인</a> 
-							<a href="/member/joinForm">회원가입</a>
-						</c:when>
-						<c:when test="${auth eq 'ROLE_MEMBER' }">
-							<a href="/member/customLogout" style="margin: 0px;"><i class="fa fa-user"></i> 로그아웃 </a> 
-						</c:when> 
-						</c:choose>
-					</div> --%>
-					
-
+						
+						<sec:authorize access="isAuthenticated()">
+							<div class="header__top__right__auth">
+								<a href="/member/customLogout" style="margin: 0px;"><i class="fa fa-user"></i> 로그아웃 </a>
+							</div>
+						</sec:authorize>
+						
+						<sec:authorize access="isAnonymous()">
+							<div class="header__top__right__auth">
+								<a href="/member/customLogin" style="margin: 0px;"><i class="fa fa-user"></i> 로그인</a> 
+								<a href="/member/joinForm">회원가입</a>
+							</div>
+						</sec:authorize>
 				</div>
 			</div>
 		</div>

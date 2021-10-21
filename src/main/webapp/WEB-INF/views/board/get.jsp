@@ -39,6 +39,10 @@
 
 			<div class="join_btns">
 				<div class="join_btn">
+					<button type="button" class="site-btn" id="checkBtn" 
+					style="background: #7FAEC5;">파일 선택</button>
+				</div>
+				<div class="join_btn">
 					<button type="button" class="site-btn" id="checkBtn"
 						onClick="location.href='/board/modify?bno=<%=getboard.getBno()%>'">수정하기</button>
 					<button type="button" class="site-btn" id="checkBtn"

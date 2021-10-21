@@ -9,22 +9,26 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.dohyeong.domain.BoardVO;
-import com.dohyeong.domain.*;
+import com.dohyeong.domain.Criteria;
+import com.dohyeong.domain.PageDTO;
 import com.dohyeong.service.BoardService;
 
 import lombok.AllArgsConstructor;
-//import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j;
 
 @Controller
 //@RequestMapping("/board/*")
 @AllArgsConstructor
-
+@Log4j
 public class BoardController {
 	//반드시 서비스를 쓸수있도록 만들어주자.
 	private BoardService service;
 	
+	
 	//메인페이지>게시판리스트보기
-	//페이징처리
+	/*------------------------
+	 * ------페이징처리 --------
+	 * ------------------------	 */
 	//@RequestMapping(value="/board/boardlist")
 	@GetMapping("/board/boardlist")
 	//public String BoardList( Model model)
@@ -40,14 +44,11 @@ public class BoardController {
 		//return "board/boardlist";
 	}
 	
-	/*
-	 * // @RequestMapping(value="/board/boardlist") // public String BoardList(Model
-	 * model) { // model.addAttribute("list", service.getList()); //
-	 * System.out.println("aaa"); // // return "board/boardlist"; // }
-	 */	
 	
 	
-	//게시판리스트>등록페이지
+	/*-----------------------------
+	 * ---게시판리스트>등록페이지----
+	 * ---------------------------	 */
 	//requestmapping이 얘앞에 board를 넣어줬었다. 근데 밑에 redirect사용으로인해 클래스위에선언한걸지우고 그냥 각자 넣어주기로함.
 	@GetMapping(value="/board/register")
 	public String Register( ) {
@@ -69,8 +70,12 @@ public class BoardController {
 		}
 		
 	}
-		
-	//게시판리스트>상세페이지보기
+	
+	
+	
+	/*------------------------
+	 * ------게시물상세, 수정 --------
+	 * ------------------------	 */
 	//상세페이지>수정페이지>버튼을눌러 업데이트시킨다
 	@GetMapping({"/board/get","/board/modify"})
 	public void get(@RequestParam("bno") Long bno, Model model) {
@@ -79,6 +84,10 @@ public class BoardController {
 		model.addAttribute("getboard", service.get(bno));
 	}
 	
+	
+	/*------------------------
+	 * ------게시물 수정--------
+	 * ------------------------	 */
 	//@RequestMapping(value="/board/modify_submit", method = RequestMethod.POST)
 	@PostMapping(value="/board/modify_submit")
 	public String modify(BoardVO board) {
@@ -96,22 +105,10 @@ public class BoardController {
 		}
 		
 	}
-/*
-	@PostMapping("/board/remove")
-	public String remove(BoardVO board) {
-		System.out.println("--remove controller--");
-		int result = service.remove(board);
-		System.out.println("--remove board--->"+ board);
-		if(result==1) {
-			System.out.println("삭제완료");
-			return "redirect:/board/boardlist";
-		}
-		else {
-			System.out.println("샂제실패");
-			return null;
-		}
-	}
-*/	
+
+	/*------------------------
+	 * ------게시물삭제 --------
+	 * ------------------------	 */
 	@PostMapping("/board/remove")
 	public String remove(BoardVO board) {
 		System.out.println("--remove controller--");
@@ -130,6 +127,15 @@ public class BoardController {
 			System.out.println("샂제실패");
 			return null;
 		}
+	}
+	
+	
+	/*--------------------------
+	  * ------파일업로드기능 ------
+	 * ------------------------- */
+	@GetMapping("/board/geit")
+	public void uploadForm() {
+		log.info("upload form");
 	}
 	
 	//페이징처리

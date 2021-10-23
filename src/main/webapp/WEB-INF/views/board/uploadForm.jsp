@@ -10,7 +10,7 @@
 <body>
 
 
-	<form action="uploadFormAction" method="post" enctype="multipart/form-data">
+	<form action="/board/uploadFormAction" method="post" enctype="multipart/form-data">
 	
 		<input type='file' name='uploadFile' mutiple>
 		<button>전송</button>

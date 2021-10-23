@@ -20,6 +20,7 @@
 	
 	<security:http pattern="/board/uploadForm" security="none"/>
 	<security:http pattern="/board/uploadFormAction" security="none"/>
+	<security:http pattern="/board/uploadAjaxAction" security="none"/>
 	<!-- <security:http auto-config="true" use-expressions="true"> -->
 	<security:http>
 	

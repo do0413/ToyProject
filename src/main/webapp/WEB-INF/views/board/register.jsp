@@ -34,22 +34,22 @@
 				<td><textarea name="content" id="editor4" ></textarea></td>
 			</div>
 			
-	<div class="join_btns">
-		<div class="join_btn">
-			<input type='file' name='uploadFile' multiple>
-			<!--<button type="submit" class="site-btn" id="checkBtn" 
-					style="background: #7FAEC5;">파일 선택</button>  -->
-		</div>
-		<div class="join_btn">
-			<button type="submit"  class="site-btn" >등록</button>
-			<button type="button"  class="site-btn"
-				onClick="history.go(-1)">리스트로</button>
-		</div>
-	</div>
-	
-	
+			<div class="join_btns">
+				<div class="join_btn">
+					<input type='file' name='uploadFile' multiple>
+					<!-- <button type="submit" class="site-btn" id="checkBtn" 
+							style="background: #7FAEC5;">파일 선택</button> -->
+				</div>
+				<div class="join_btn">
+					<button type="submit"  class="site-btn" >등록</button>
+					<button type="button"  class="site-btn"
+						onClick="history.go(-1)">리스트로</button>
+				</div>
+			</div>
+
 		</form>
 	</div>
 
 
 </div>
+<script></script>

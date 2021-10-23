@@ -133,10 +133,10 @@ public class BoardController {
 	/*--------------------------
 	  * ------파일업로드기능 ------
 	 * ------------------------- */
-	@GetMapping("/board/geit")
+	/*@GetMapping("/board/geit")
 	public void uploadForm() {
 		log.info("upload form");
-	}
+	}*/
 	
 	//페이징처리
 	//@GetMapping("/board/list")

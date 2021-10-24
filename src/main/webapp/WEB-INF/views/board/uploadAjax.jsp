@@ -16,6 +16,12 @@
 		<input type='file' name='uploadFile' multiple>
 	</div>
 	
+	<div class='uploadResult'>
+		<ul>
+		
+		</ul>
+	</div>
+	
 	<button id='uploadBtn'>Upload</button>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
@@ -40,7 +46,9 @@
 		return true;
 	}
 	
+	
 	//$(document).ready(function(){
+		var cloneObj = $(".uploadDiv").clone();
 		
 		$("#uploadBtn").on("click", function(e){
 			debugger;
@@ -53,13 +61,13 @@
 			console.log(files);
 			
 			//add filedate to formdata
-			for(var i=0; 1 <files.length; i++) {
+			for(var i=0; i <files.length; i++) {
 				
 				if(!checkExtension(files[i].name, files[i].size)) {
 					return false;
 				}
 				
-				formData.append("uploadFile",files[i]);
+				formData.append("uploadFile", files[i]);
 			}
 			
 			$.ajax({
@@ -69,12 +77,30 @@
 				contentType: false,
 				data : formData,
 				type: 'POST',
+				dataType : 'json',
 				sucess: function(result){
-					debugger;
-					alert("Uploaded");
+					
+					console.log(result);
+					
+					showUploadedFile(result);
+					
+					$(".uploadDiv").html(cloneObj.html());
 				}
 			});//ajax
 		});
+		
+		var uploadResult= $(".uploadResult ul");
+		
+		function showUploadedFile(uploadResultArr) {
+			var str ="";
+			
+			$(uploadResultArr).each(function(i,obj) {
+				srt += "<li>" + obj.fileName + "</li>";
+			});
+			
+			uploadResult.append(str);
+		}
+		
 		
 	//});
 	</script>

@@ -52,7 +52,7 @@ public class BoardController {
 	//requestmapping이 얘앞에 board를 넣어줬었다. 근데 밑에 redirect사용으로인해 클래스위에선언한걸지우고 그냥 각자 넣어주기로함.
 	@GetMapping(value="/board/register")
 	public String Register( ) {
-		return "board/register";
+		return "board/register";// jsp가 반환됨.
 	}
 	//등록페이지>등록버튼을 눌렀을때
 	@RequestMapping(value="/board/register_st", method = RequestMethod.POST)
